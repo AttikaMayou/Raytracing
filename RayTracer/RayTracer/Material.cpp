@@ -14,6 +14,21 @@ Material::Material(Type t, vec3 c, float i)
 	ior = i;
 }
 
+Material::Material(const Material& m)
+{
+	type = m.type;
+	color = m.color;
+	ior = m.ior;
+}
+
+Material& Material::operator=(const Material& m)
+{
+	type = m.type;
+	color = m.color;
+	ior = m.ior;
+	return *this;
+}
+
 void Material::SetMaterialType(Type t)
 {
 	type = t;

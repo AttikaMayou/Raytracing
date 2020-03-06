@@ -11,7 +11,9 @@ private:
 public:
 	Light() : position(vec3{ 0.f, 0.f, 0.f }), direction(vec3{ 0.f, 0.f, 0.f }) {}
 	Light(vec3 p, vec3 d) : position(p), direction(d) {}
+	Light(const Light& l);
 	~Light();
+	Light& operator=(const Light& l);
 };
 
 // exo1 = appliquer l'équation de Lambert (N dot L)

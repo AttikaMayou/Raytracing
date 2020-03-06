@@ -15,9 +15,24 @@ Sphere::Sphere(const vec3& p, float r, const  Material* m) : position(p), radius
 
 }
 
+Sphere::Sphere(const Sphere& s)
+{
+	position = s.position;
+	radius = s.radius;
+	mat = s.mat;
+}
+
 Sphere::~Sphere()
 {
 	delete mat;
+}
+
+Sphere& Sphere::operator=(const Sphere& s)
+{
+	position = s.position;
+	radius = s.radius;
+	mat = s.mat;
+	return *this;
 }
 
 void Sphere::SetPosition(const vec3& p)

@@ -1,3 +1,4 @@
+#include "vec3.h"
 inline void vec3::setX(float x)
 {
 	_x = x;
@@ -11,6 +12,14 @@ inline void vec3::setY(float y)
 inline void vec3::setZ(float z)
 {
 	_z = z;
+}
+
+inline vec3& vec3::operator=(const vec3& v)
+{
+	_x = v._x;
+	_y = v._y;
+	_z = v._z;
+	return *this;
 }
 
 inline vec3 vec3::operator*(const float t) const

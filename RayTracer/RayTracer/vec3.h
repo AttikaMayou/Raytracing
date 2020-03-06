@@ -23,18 +23,21 @@ public :
 		_z = z;
 	}
 
+	inline vec3(const vec3& v) : _x(v._x), _y(v._y), _z(v._z) {}
+
 	inline ~vec3()
 	{
 
 	}
 
-	float getX() { return _x; }
-	float getY() { return _y; }
-	float getZ() { return _z; }
+	float getX() const { return _x; }
+	float getY() const { return _y; }
+	float getZ() const { return _z; }
 	inline void setX(float x);
 	inline void setY(float y);
 	inline void setZ(float z);
 
+	inline vec3& operator=(const vec3& v);
 	inline vec3 operator*(const float t) const;
 	inline vec3 operator+(const vec3& rhs) const;
 	inline vec3 operator-(const vec3& rhs) const;

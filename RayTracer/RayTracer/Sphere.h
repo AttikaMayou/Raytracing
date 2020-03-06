@@ -13,7 +13,9 @@ public :
 	Sphere();
 	Sphere(const vec3& p, float r);
 	Sphere(const vec3& p, float r, const  Material* m);
+	Sphere(const Sphere& s);
 	virtual ~Sphere();
+	Sphere& operator=(const Sphere& s);
 	vec3 GetPosition() const { return position; }
 	float GetRadius() const { return radius; }
 	const Material* GetMaterial() const { return mat; }

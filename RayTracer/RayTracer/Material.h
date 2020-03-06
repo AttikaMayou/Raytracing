@@ -21,7 +21,9 @@ public:
 
 	Material();
 	Material(Type t, vec3 c, float i);
+	Material(const Material& m);
 	~Material() {}
+	Material& operator=(const Material& m);
 	Type GetMaterial() { return type; }
 	vec3 GetColor() { return color; }
 	float GetIor() { return ior; }
