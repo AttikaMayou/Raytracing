@@ -1,7 +1,5 @@
 #include "Sphere.h"
 
-//TODO : régler les soucis de pointeurs sur Material
-
 Sphere::Sphere() : position({ 0.f, 0.f, 0.f }), radius(0.f)
 {
 	mat = new Material(Material::Type::MATTE, { 0.f, 1.f, 0.f }, 1.f);
@@ -22,8 +20,21 @@ Sphere::~Sphere()
 	delete mat;
 }
 
-// retourne la distance d'intersection (t) si le discriminant est positif
-// sinon on retourne une valeur négative (quelconque)
+void Sphere::SetPosition(const vec3& p)
+{
+	position = p;
+}
+
+void Sphere::SetRadius(const float r)
+{
+	radius = r;
+}
+
+void Sphere::SetMaterial(Material* m)
+{
+	mat = m;
+}
+
 float Sphere::intersect(const Ray& ray) const
 {
 	vec3 diff = ray.origin - position;

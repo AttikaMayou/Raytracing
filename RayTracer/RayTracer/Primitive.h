@@ -3,7 +3,6 @@
 #include "Material.h"
 #include "Ray.h"
 
-//TODO : faire les getter-setter
 //TODO : faire une classe parent de Primitive pour gérer les light (pas de normal pour elles)
 
 class Primitive {

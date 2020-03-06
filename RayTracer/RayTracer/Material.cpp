@@ -13,3 +13,18 @@ Material::Material(Type t, vec3 c, float i)
 	color = c;
 	ior = i;
 }
+
+void Material::SetMaterialType(Type t)
+{
+	type = t;
+}
+
+void Material::SetMaterialColor(const vec3& c)
+{
+	color = c;
+}
+
+void Material::SetMaterialIndice(float i)
+{
+	ior = i;
+}

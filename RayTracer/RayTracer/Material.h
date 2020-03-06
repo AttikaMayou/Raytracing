@@ -22,5 +22,11 @@ public:
 	Material();
 	Material(Type t, vec3 c, float i);
 	~Material() {}
+	Type GetMaterial() { return type; }
+	vec3 GetColor() { return color; }
+	float GetIor() { return ior; }
+	void SetMaterialType(Type t);
+	void SetMaterialColor(const vec3& c);
+	void SetMaterialIndice(float i);
 };
 
