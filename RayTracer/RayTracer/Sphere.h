@@ -8,19 +8,18 @@ class Sphere : public Primitive {
 private :
 	vec3 position;
 	float radius;
-	Material* mat;
 
 public :
 	Sphere();
 	Sphere(const vec3& p, float r);
-	Sphere(const vec3& p, float r, Material* m);
+	Sphere(const vec3& p, float r, const  Material* m);
 	virtual ~Sphere();
-	vec3 GetPosition() { return position; }
-	float GetRadius() { return radius; }
-	Material* GetMaterial() { return mat; }
+	vec3 GetPosition() const { return position; }
+	float GetRadius() const { return radius; }
+	const Material* GetMaterial() const { return mat; }
 	void SetPosition(const vec3& p);
 	void SetRadius(const float r);
-	void SetMaterial(Material* m);
+	void SetMaterial(const Material* m);
 
 	// retourne la distance d'intersection (t) si le discriminant est positif
 	// sinon on retourne une valeur négative (quelconque)

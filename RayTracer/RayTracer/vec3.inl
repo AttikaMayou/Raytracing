@@ -1,28 +1,14 @@
-#include "vec3.h"
-
-vec3::vec3(float x, float y, float z)
-{
-	_x = x;
-	_y = y;
-	_z = z;
-}
-
-vec3::~vec3()
-{
-	
-}
-
-void vec3::setX(float x)
+inline void vec3::setX(float x)
 {
 	_x = x;
 }
 
-void vec3::setY(float y)
+inline void vec3::setY(float y)
 {
 	_y = y;
 }
 
-void vec3::setZ(float z)
+inline void vec3::setZ(float z)
 {
 	_z = z;
 }

@@ -38,9 +38,9 @@ int main(int argc, const char* argv[])
 
 			// compression gamma des couleurs linéaires
 			// pour la stockage en 8 bits RGB
-			int r = int(powf(col.r, 1.f / 2.2f) * 255.99f);
-			int g = int(powf(col.g, 1.f / 2.2f) * 255.99f);
-			int b = int(powf(col.b, 1.f / 2.2f) * 255.99f);
+			int r = int(powf(col.getX(), 1.f / 2.2f) * 255.99f);
+			int g = int(powf(col.getY(), 1.f / 2.2f) * 255.99f);
+			int b = int(powf(col.getZ(), 1.f / 2.2f) * 255.99f);
 			bmp.OutputColor(r, g, b);
 		}
 	}

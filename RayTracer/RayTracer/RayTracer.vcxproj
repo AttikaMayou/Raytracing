@@ -155,7 +155,6 @@
     <ClCompile Include="RayTracer.cpp" />
     <ClCompile Include="Sphere.cpp" />
     <ClCompile Include="Tracer.cpp" />
-    <ClCompile Include="vec3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Background.h" />
@@ -169,6 +168,9 @@
     <ClInclude Include="Sphere.h" />
     <ClInclude Include="Tracer.h" />
     <ClInclude Include="vec3.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vec3.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

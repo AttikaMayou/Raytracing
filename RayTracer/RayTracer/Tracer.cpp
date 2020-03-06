@@ -16,40 +16,17 @@ Tracer::~Tracer()
 {
 	for (Primitive* primitive : scene)
 		delete primitive;
-	delete mat;
 }
 
 // renvoie la couleur intersectée par le rayon
 	// cette fois-ci méthode de Whitted (recursive ray tracing)
-vec3 Tracer::trace(const Ray& ray, int depth = 0)
+vec3 Tracer::trace(const Ray& ray, int depth)
 {
 	// calcul de la couleur du background pour le pixel (i, j)
 	color col = background.Get(ray.direction);
 
 	if (depth >= MAX_DEPTH)
 		return col;
-
-	//---------------MÉTHODE APPEL---------------
-	//for (int i = 0; i < scene.size(); ++i)
-	//{
-	//	float distance = scene[i].intersect(ray);
-	//	if (distance > 0.f)
-	//	{
-	//		col = { 1.f, 0.f, 1.f };
-	//		// 1. calcul du point d'intersection
-	//		vec3 position = ray.evaluate(distance);
-	//		// 2. calcul d'une normale (sphere)
-	//		vec3 normal = (position - scene[i].position).normalize();
-	//		// 3. init. du nouveau rayon
-	//		Ray newRay;
-	//		newRay.direction = normal;
-	//		// éviter les problèmes d'arrondis en ajoutant "normal * EPSILON"
-	//		newRay.origin = position + normal * EPSILON;
-	//		//appel récursif de trace()
-	//		col = col * trace(newRay, depth + 1);
-	//	}
-	//}
-	//-------------------------------------------
 
 	//Intersection intersection { FLT_MAX, nullptr};
 	Intersection intersection{ std::numeric_limits<float>::max(), nullptr };
@@ -64,6 +41,7 @@ vec3 Tracer::trace(const Ray& ray, int depth = 0)
 			intersection.distance = distanceTmp;
 			intersection.primitive = primitive;
 			col = { 1.f, 0.f, 1.f };
+			//col = static_cast<const Sphere*>(primitive)->GetMaterial()->GetColor();
 		}
 	}
 
@@ -71,16 +49,18 @@ vec3 Tracer::trace(const Ray& ray, int depth = 0)
 	{
 		// 1. calcul du point d'intersection
 		vec3 position = ray.evaluate(intersection.distance);
+
 		// 2. calcul d'une normale (sphere)
 		vec3 normal = intersection.primitive->calcNormal(position);
 		//			  (position - dynamic_cast<const Sphere*>(intersection.primitive->position)).normalize();
+		
 		// 3. exo2 shadow feeler
 		//		=> voir Light.h
+
 		// 4. init. du nouveau rayon
 		Ray newRay;
-		newRay.direction = normal;
-		// éviter les problèmes d'arrondis en ajoutant "normal * EPSILON"
-		newRay.origin = position + normal * EPSILON;
+		newRay.direction = normal;		
+		newRay.origin = position + normal * EPSILON; // éviter les problèmes d'arrondis en ajoutant "normal * EPSILON"
 
 
 

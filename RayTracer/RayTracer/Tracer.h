@@ -2,7 +2,6 @@
 
 #include "Background.h"
 #include "Intersection.h"
-#include "Material.h"
 #include <vector>
 
 //TODO : récupérer tous les trucs imports du main (background, spheres...) 
@@ -17,7 +16,7 @@ private :
 	Background background;
 	// scene
 	std::vector<Primitive*> scene;
-	Material* mat;
+	Material* mat = nullptr;
 
 public :
 	Tracer();

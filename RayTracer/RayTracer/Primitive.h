@@ -8,9 +8,11 @@
 class Primitive {
 
 private :
-
+protected : 
+	const Material* mat = nullptr;
 public :
 	Primitive();
+	Primitive(const Material* m);
 	virtual float intersect(const Ray& ray) const = 0;
 	virtual vec3 calcNormal(const vec3& p) const = 0;
 	virtual ~Primitive();

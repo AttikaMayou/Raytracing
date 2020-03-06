@@ -15,16 +15,25 @@ private :
 	};
 
 public : 
-	vec3() : _x(0.f), _y (0.f), _z(0.f) {}
-	vec3(float x, float y, float z);
-	~vec3();
+	inline vec3() : _x(0.f), _y (0.f), _z(0.f) {}
+	inline vec3(float x, float y, float z)
+	{
+		_x = x;
+		_y = y;
+		_z = z;
+	}
+
+	inline ~vec3()
+	{
+
+	}
 
 	float getX() { return _x; }
 	float getY() { return _y; }
 	float getZ() { return _z; }
-	void setX(float x);
-	void setY(float y);
-	void setZ(float z);
+	inline void setX(float x);
+	inline void setY(float y);
+	inline void setZ(float z);
 
 	inline vec3 operator*(const float t) const;
 	inline vec3 operator+(const vec3& rhs) const;
@@ -36,3 +45,5 @@ public :
 
 // equivalent a typedef vec3 color;
 using color = vec3;
+
+#include "vec3.inl"
