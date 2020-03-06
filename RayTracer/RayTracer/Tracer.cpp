@@ -59,7 +59,7 @@ vec3 Tracer::trace(const Ray& ray, int depth = 0)
 	{
 		float distanceTmp = primitive->intersect(ray);
 
-		if (distanceTmp > EPSILON&& distanceTmp < intersection.distance)
+		if (distanceTmp > EPSILON && distanceTmp < intersection.distance)
 		{
 			intersection.distance = distanceTmp;
 			intersection.primitive = primitive;

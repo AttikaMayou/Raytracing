@@ -24,7 +24,7 @@ public :
 
 	// retourne la distance d'intersection (t) si le discriminant est positif
 	// sinon on retourne une valeur négative (quelconque)
-	float intersect(const Ray& ray) const final {}
-
-	virtual vec3 calcNormal(const vec3& p) const final {}
+	float intersect(const Ray& ray) const;
+	
+	virtual vec3 calcNormal(const vec3& p) const;
 };

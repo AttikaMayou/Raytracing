@@ -10,9 +10,8 @@ class Primitive {
 private :
 
 public :
-	Primitive() {}
-	~Primitive() {}
+	Primitive();
 	virtual float intersect(const Ray& ray) const = 0;
 	virtual vec3 calcNormal(const vec3& p) const = 0;
-	virtual ~Primitive() {}
+	virtual ~Primitive();
 };
