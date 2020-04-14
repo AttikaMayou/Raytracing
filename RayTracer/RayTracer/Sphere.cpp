@@ -52,9 +52,9 @@ void Sphere::SetMaterial(const Material* m)
 
 float Sphere::intersect(const Ray& ray) const
 {
-	vec3 diff = ray.origin - position;
+	vec3 diff = ray.getOrigin() - position;
 	float a = diff.dot(diff);
-	vec3 v = ray.direction;
+	vec3 v = ray.getDirection();
 	v.normalize();
 	float b = diff.dot(v);
 	float c = diff.dot(diff) - radius * radius;

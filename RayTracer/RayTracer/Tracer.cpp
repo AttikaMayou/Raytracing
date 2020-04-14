@@ -23,7 +23,7 @@ Tracer::~Tracer()
 vec3 Tracer::trace(const Ray& ray, int depth)
 {
 	// calcul de la couleur du background pour le pixel (i, j)
-	color col = background.Get(ray.direction);
+	color col = background.Get(ray.getDirection());
 
 	if (depth >= MAX_DEPTH)
 		return col;
