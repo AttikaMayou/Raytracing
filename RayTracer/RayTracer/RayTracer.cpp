@@ -30,9 +30,11 @@ int main(int argc, const char* argv[])
 
 			// Génération du rayon primaire
 			Ray ray;
-			ray.origin = { 0.f, 0.f, 0.f };
-			ray.direction = { x , y , 1.f };
-			ray.direction.normalize(); 
+			vec3 orig = { 0.f, 0.f, 0.f };
+			ray.setOrigin(orig);
+			vec3 dir = { x , y , 1.f };
+			ray.setDirection(dir);
+			ray.normalizeDirection();
 
 			color col = tracer.trace(ray);
 

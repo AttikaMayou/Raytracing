@@ -24,6 +24,7 @@ public :
 	void setOrigin(const vec3& o);
 	void setTMin(float t);
 	void setDirection(const vec3& d);
+	void normalizeDirection();
 	void SetTMax(float t);
 	// calcule la position d'un point (intersection)
 	// en fonction d'un paramètre de distance

@@ -33,6 +33,11 @@ void Ray::setDirection(const vec3& d)
 {
 }
 
+void Ray::normalizeDirection()
+{
+	direction.normalize();
+}
+
 void Ray::SetTMax(float t)
 {
 }
