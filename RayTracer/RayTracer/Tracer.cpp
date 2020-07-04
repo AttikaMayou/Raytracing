@@ -1,8 +1,8 @@
 #include "Tracer.h"
 
 Tracer::Tracer()
-{
-	mat = new Material(Material::Type::MATTE, vec3{ 1.f, 0.f, 1.f }, 1.f);
+{ 
+	mat = new Material(Material::Type::MATTE, vec3{ 1.f, 0.f, 0.f }, 1.f);
 
 	scene.push_back(new Sphere( {0.f, 0.f, 2.f}, 1.f, mat ));
 	/*scene.push_back({ {0.f, 0.f, 2.f}, 1.f });
@@ -32,7 +32,7 @@ vec3 Tracer::trace(const Ray& ray, int depth)
 	Intersection intersection{ std::numeric_limits<float>::max(), nullptr };
 
 	// on itère sur l'ensemble des primitives de la scène
-	for (const Primitive* primitive : scene) //c++11 ranged-for
+	for (Primitive* primitive : scene) //c++11 ranged-for
 	{
 		float distanceTmp = primitive->intersect(ray);
 
@@ -40,8 +40,8 @@ vec3 Tracer::trace(const Ray& ray, int depth)
 		{
 			intersection.distance = distanceTmp;
 			intersection.primitive = primitive;
-			col = { 1.f, 0.f, 1.f };
-			//col = static_cast<const Sphere*>(primitive)->GetMaterial()->GetColor();
+			//col = { 1.f, 0.f, 0.f };
+			col = primitive->GetMaterial()->GetColor();
 		}
 	}
 

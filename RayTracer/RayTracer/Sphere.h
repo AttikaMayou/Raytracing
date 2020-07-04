@@ -12,7 +12,7 @@ private :
 public :
 	Sphere();
 	Sphere(const vec3& p, float r);
-	Sphere(const vec3& p, float r, const  Material* m);
+	Sphere(const vec3& p, float r, Material* m);
 	Sphere(const Sphere& s);
 	virtual ~Sphere();
 	Sphere& operator=(const Sphere& s);
@@ -21,7 +21,6 @@ public :
 	const Material* GetMaterial() const { return mat; }
 	void SetPosition(const vec3& p);
 	void SetRadius(const float r);
-	void SetMaterial(const Material* m);
 
 	// retourne la distance d'intersection (t) si le discriminant est positif
 	// sinon on retourne une valeur négative (quelconque)

@@ -5,7 +5,7 @@ Primitive::Primitive()
 
 }
 
-Primitive::Primitive(const Material* m)
+Primitive::Primitive(Material* m)
 {
 	mat = m;
 }
@@ -23,4 +23,12 @@ Primitive& Primitive::operator=(const Primitive& p)
 
 Primitive::~Primitive()
 {
+}
+
+Material* Primitive::GetMaterial() {
+	return mat;
+}
+
+void Primitive::SetMaterial(Material* m) {
+	mat = m;
 }
