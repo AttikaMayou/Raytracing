@@ -1,8 +1,9 @@
 #pragma once
 
-#include "vec3.h"
+#include<iostream>
+using namespace std;
 
-//TODO : faire les getter-setter
+#include "vec3.h"
 
 class Ray {
 private :
@@ -26,6 +27,7 @@ public :
 	void setDirection(const vec3& d);
 	void normalizeDirection();
 	void SetTMax(float t);
+	void swap(Ray& r);
 	// calcule la position d'un point (intersection)
 	// en fonction d'un paramètre de distance
 	inline vec3 evaluate(const float t) const {

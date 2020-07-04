@@ -58,9 +58,8 @@ vec3 Tracer::trace(const Ray& ray, int depth)
 		//		=> voir Light.h
 
 		// 4. init. du nouveau rayon
-		Ray newRay;
-		newRay.direction = normal;		
-		newRay.origin = position + normal * EPSILON; // éviter les problèmes d'arrondis en ajoutant "normal * EPSILON"
+		Ray newRay = Ray(normal, 0.1f, position + normal * EPSILON, 0.9f);
+		// éviter les problèmes d'arrondis en ajoutant "normal * EPSILON"
 
 
 
