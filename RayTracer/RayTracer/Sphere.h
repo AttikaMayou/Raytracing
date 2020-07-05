@@ -2,8 +2,6 @@
 
 #include "Primitive.h"
 
-//TODO : gérer l'héritage depuis "Primitive"
-
 class Sphere : public Primitive {
 private :
 	vec3 position;
