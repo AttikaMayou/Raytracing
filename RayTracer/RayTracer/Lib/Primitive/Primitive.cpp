@@ -12,10 +12,16 @@ Primitive::Primitive(Material* m)
 	mat = m;
 }
 
-Primitive::Primitive(const vec3& p, const vec3& r, const vec3& s)
-	: position(p), rotation(r), scale(s)
+Primitive::Primitive(const vec3& p)
+	: position(p), rotation({ 0.f, 0.f, 0.f }), scale({ 1.f, 1.f, 1.f })
 {
 	mat = nullptr;
+}
+
+Primitive::Primitive(const vec3& p, Material* m)
+	: position(p), rotation({ 0.f, 0.f, 0.f }), scale({ 1.f, 1.f, 1.f })
+{
+	mat = m;
 }
 
 Primitive::Primitive(const vec3& p, const vec3& r, const vec3& s, Material* m)

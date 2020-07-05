@@ -9,8 +9,8 @@ private :
 
 public :
 	Plane();
-	Plane(const vec3& a);
-	Plane(const vec3& a, Material* m);
+	Plane(const vec3& p, const vec3& a);
+	Plane(const vec3& p, const vec3& a, Material* m);
 	Plane(const Plane& p);
 	virtual ~Plane();
 

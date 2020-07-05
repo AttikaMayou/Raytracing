@@ -15,7 +15,8 @@ protected :
 public :
 	Primitive();
 	Primitive(Material* m);
-	Primitive(const vec3& p, const vec3& r, const vec3& s);
+	Primitive(const vec3& p);
+	Primitive(const vec3& p, Material* m);
 	Primitive(const vec3& p, const vec3& r, const vec3& s, Material* m);
 	Primitive(const Primitive& p);
 	Primitive& operator=(const Primitive& p);
