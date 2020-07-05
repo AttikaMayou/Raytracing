@@ -151,6 +151,7 @@
     <ClCompile Include="Cube.cpp" />
     <ClCompile Include="Cylinder.cpp" />
     <ClCompile Include="DirectionalLight.cpp" />
+    <ClCompile Include="Lib\Matrix.cpp" />
     <ClCompile Include="Light.cpp" />
     <ClCompile Include="Material.cpp" />
     <ClCompile Include="Plane.cpp" />
@@ -166,6 +167,7 @@
     <ClInclude Include="Cube.h" />
     <ClInclude Include="Cylinder.h" />
     <ClInclude Include="DirectionalLight.h" />
+    <ClInclude Include="Header\Matrix.h" />
     <ClInclude Include="Intersection.h" />
     <ClInclude Include="Light.h" />
     <ClInclude Include="Material.h" />

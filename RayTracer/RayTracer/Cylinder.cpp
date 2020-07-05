@@ -1,19 +1,19 @@
 #include "Cylinder.h"
 
 Cylinder::Cylinder()
-	: position( {0.f, 0.f, 0.f}), axe({ 0.f, 1.f, 0.f }), radius(0.f)
+	: axe({ 0.f, 1.f, 0.f }), radius(0.f)
 {
 	mat = new Material(Material::Type::MATTE, { 0.f, 1.f, 0.f }, 1.f);
 }
 
 Cylinder::Cylinder(const vec3& p, const vec3 a, const float r)
-	: position(p), axe(a), radius(r)
+	: axe(a), radius(r)
 {
 	mat = new Material(Material::Type::MATTE, { 0.f, 1.f, 0.f }, 1.f);
 }
 
 Cylinder::Cylinder(const vec3& p, const vec3 a, const float r, Material* m)
-	: Primitive(m), position(p), axe(a), radius(r)
+	: Primitive(m), axe(a), radius(r)
 {
 	
 }
@@ -38,11 +38,6 @@ Cylinder& Cylinder::operator=(const Cylinder& c)
 	radius = c.radius;
 	mat = c.mat;
 	return *this;
-}
-
-void Cylinder::SetPosition(const vec3& p)
-{
-	position = p;
 }
 
 void Cylinder::SetAxe(const vec3& a)

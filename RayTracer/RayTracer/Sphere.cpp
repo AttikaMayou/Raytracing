@@ -1,13 +1,13 @@
 #include "Sphere.h"
 
 Sphere::Sphere()
-	: radius(0.f)
+	: Primitive({ 0.f, 0.f, 0.f }, { 0.f, 0.f, 0.f }, { 1.f,1.f,1.f }), radius(0.f)
 {
 	mat = new Material(Material::Type::MATTE, { 0.f, 1.f, 0.f }, 1.f);
 }
 
 Sphere::Sphere(const vec3& p, const float r)
-	: Primitive(p), radius(r) 
+	: Primitive(p, {0.f, 0.f, 0.f}, {1.f,1.f,1.f}), radius(r) 
 {
 	mat = new Material(Material::Type::MATTE, { 0.f, 1.f, 0.f }, 1.f);
 }

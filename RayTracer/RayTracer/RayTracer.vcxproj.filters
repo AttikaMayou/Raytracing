@@ -25,35 +25,20 @@
     <Filter Include="Source Files\Header\Primitive">
       <UniqueIdentifier>{1322e5a3-b51f-4e91-99ca-026d4c7f3621}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Lib\Light">
+      <UniqueIdentifier>{fb3f92a8-66fc-46d2-96bd-70d5ed9e54c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Header\Light">
+      <UniqueIdentifier>{070cd250-30f7-40b8-8399-6c5d9c00f02e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Header\Utils">
+      <UniqueIdentifier>{565bc301-f975-42f9-a0c2-fe5d9646e905}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lib\Utils">
+      <UniqueIdentifier>{9a7c3a82-01cc-4590-924a-163719b20379}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Bitmap.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RayTracer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Sphere.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Tracer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DirectionalLight.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Light.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Primitive.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Material.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Ray.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Plane.cpp">
       <Filter>Source Files\Lib\Primitive</Filter>
     </ClCompile>
@@ -63,41 +48,38 @@
     <ClCompile Include="Cylinder.cpp">
       <Filter>Source Files\Lib\Primitive</Filter>
     </ClCompile>
+    <ClCompile Include="Bitmap.cpp">
+      <Filter>Source Files\Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionalLight.cpp">
+      <Filter>Source Files\Lib\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>Source Files\Lib\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Source Files\Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Primitive.cpp">
+      <Filter>Source Files\Lib\Primitive</Filter>
+    </ClCompile>
+    <ClCompile Include="Ray.cpp">
+      <Filter>Source Files\Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="RayTracer.cpp">
+      <Filter>Source Files\Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>Source Files\Lib\Primitive</Filter>
+    </ClCompile>
+    <ClCompile Include="Tracer.cpp">
+      <Filter>Source Files\Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\Matrix.cpp">
+      <Filter>Source Files\Lib\Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Bitmap.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="vec3.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Background.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Ray.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Sphere.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Tracer.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Primitive.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Intersection.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Light.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DirectionalLight.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Material.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Plane.h">
       <Filter>Source Files\Header\Primitive</Filter>
     </ClInclude>
@@ -107,10 +89,46 @@
     <ClInclude Include="Cylinder.h">
       <Filter>Source Files\Header\Primitive</Filter>
     </ClInclude>
+    <ClInclude Include="Background.h">
+      <Filter>Source Files\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitmap.h">
+      <Filter>Source Files\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionalLight.h">
+      <Filter>Source Files\Header\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Source Files\Header\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Source Files\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Primitive.h">
+      <Filter>Source Files\Header\Primitive</Filter>
+    </ClInclude>
+    <ClInclude Include="Ray.h">
+      <Filter>Source Files\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>Source Files\Header\Primitive</Filter>
+    </ClInclude>
+    <ClInclude Include="Tracer.h">
+      <Filter>Source Files\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Matrix.h">
+      <Filter>Source Files\Header\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="vec3.h">
+      <Filter>Source Files\Header\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection.h">
+      <Filter>Source Files\Header\Utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="vec3.inl">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Lib\Utils</Filter>
     </None>
   </ItemGroup>
 </Project>

@@ -38,11 +38,6 @@ Cube& Cube::operator=(const Cube& c)
 	return *this;
 }
 
-void Cube::SetPosition(const vec3& p)
-{
-	position = p;
-}
-
 void Cube::SetSize(const float s)
 {
 	size = s;

@@ -68,6 +68,7 @@ void Primitive::Scale(const vec3& s)
 
 vec3 Primitive::LocalToGlobal(const vec3& v) const
 {
+	return { 0.f, 0.f, 0.f };
 }
 
 void Primitive::SetPosition(const vec3& p)
