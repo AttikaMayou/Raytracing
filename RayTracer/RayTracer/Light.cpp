@@ -1,9 +1,8 @@
 #include "Light.h"
 
 Light::Light(const Light& l)
+	: position(l.position), direction(l.direction)
 {
-	direction = l.direction;
-	position = l.position;
 }
 
 Light::~Light()

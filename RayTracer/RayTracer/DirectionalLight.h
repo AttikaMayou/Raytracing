@@ -8,7 +8,7 @@ private :
 
 public :
 	DirectionalLight() : Light() {}
-	DirectionalLight(vec3 p, vec3 d) : Light(p, d) {}
+	DirectionalLight(const vec3& p, const vec3& d) : Light(p, d) {}
 	DirectionalLight(const DirectionalLight& d);
 	~DirectionalLight();
 	DirectionalLight& operator=(const DirectionalLight& d);

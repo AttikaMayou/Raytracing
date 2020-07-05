@@ -22,8 +22,10 @@ Ray::~Ray()
 
 Ray& Ray::operator=(const Ray& r)
 {
-	Ray tmp = r;
-	swap(tmp);
+	origin = r.origin;
+	tmin = r.tmin;
+	direction = r.direction;
+	tmax = r.tmax;
 	return *this;
 }
 
@@ -50,12 +52,4 @@ void Ray::normalizeDirection()
 void Ray::SetTMax(float t)
 {
 	tmax = t;
-}
-
-void Ray::swap(Ray& r)
-{
-	std::swap(origin, r.origin);
-	std::swap(tmin, r.tmin);
-	std::swap(direction, r.direction);
-	std::swap(tmax, r.tmax);
 }

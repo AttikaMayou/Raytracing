@@ -11,7 +11,7 @@ struct Background
 	{
 		// conversion [-1;+1] vers [0;1]
 		// equivalent de (y + 1) / 2
-		float t = dir._y * 0.5f + 0.5f;
+		float t = dir.getY() * 0.5f + 0.5f;
 		//interpolation lineaire (lerp)
 		//A*t + B*(1 - t)
 		//A + t*(B - A)

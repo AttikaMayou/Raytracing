@@ -34,7 +34,7 @@ vec3 Tracer::trace(const Ray& ray, int depth)
 	// on itère sur l'ensemble des primitives de la scène
 	for (Primitive* primitive : scene) //c++11 ranged-for
 	{
-		float distanceTmp = primitive->intersect(ray);
+		float distanceTmp = primitive->Intersect(ray);
 
 		if (distanceTmp > EPSILON && distanceTmp < intersection.distance)
 		{
@@ -50,9 +50,9 @@ vec3 Tracer::trace(const Ray& ray, int depth)
 		// 1. calcul du point d'intersection
 		vec3 position = ray.evaluate(intersection.distance);
 
-		// 2. calcul d'une normale (sphere)
-		vec3 normal = intersection.primitive->calcNormal(position);
-		//			  (position - dynamic_cast<const Sphere*>(intersection.primitive->position)).normalize();
+		// 2. calcul d'une normale (Sphere)
+		vec3 normal = intersection.primitive->CalcNormal(position);
+		//			  (position - dynamic_cast<const Sphere*>(intersection.Primitive->position)).normalize();
 		
 		// 3. exo2 shadow feeler
 		//		=> voir Light.h

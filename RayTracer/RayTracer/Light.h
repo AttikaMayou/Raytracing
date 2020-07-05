@@ -3,14 +3,14 @@
 #include"vec3.h"
 #include "Primitive.h"
 
-class Light : Primitive {
+class Light : primitive {
 private:
 	vec3 position;
 	vec3 direction;
 
 public:
-	Light() : position(vec3{ 0.f, 0.f, 0.f }), direction(vec3{ 0.f, 0.f, 0.f }) {}
-	Light(vec3 p, vec3 d) : position(p), direction(d) {}
+	Light() : position(vec3{ 0.f, 0.f, 0.f }), direction(vec3{ 0.f, 0.f, 0.f }) {};
+	Light(const vec3& p, const vec3& d) : position(p), direction(d) {};
 	Light(const Light& l);
 	~Light();
 	Light& operator=(const Light& l);

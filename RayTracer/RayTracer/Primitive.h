@@ -3,8 +3,6 @@
 #include "Material.h"
 #include "Ray.h"
 
-//TODO : faire une classe parent de Primitive pour gérer les light (pas de normal pour elles)
-
 class Primitive {
 
 private :
@@ -15,10 +13,10 @@ public :
 	Primitive(Material* m);
 	Primitive(const Primitive& p);
 	Primitive& operator=(const Primitive& p);
-	Material* GetMaterial();
+	virtual ~Primitive();
+	Material* GetMaterial() const;
 	void SetMaterial(Material* m);
 	
-	virtual float intersect(const Ray& ray) const = 0;
-	virtual vec3 calcNormal(const vec3& p) const = 0;
-	virtual ~Primitive();
+	virtual float Intersect(const Ray& ray) const = 0;
+	virtual vec3 CalcNormal(const vec3& p) const = 0;
 };

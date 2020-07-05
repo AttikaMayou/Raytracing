@@ -23,9 +23,11 @@ Primitive& Primitive::operator=(const Primitive& p)
 
 Primitive::~Primitive()
 {
+	delete mat;
 }
 
-Material* Primitive::GetMaterial() {
+Material* Primitive::GetMaterial() const
+{
 	return mat;
 }
 

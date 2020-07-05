@@ -15,9 +15,6 @@ int main(int argc, const char* argv[])
 
 	Tracer tracer;
 
-	Sphere sphere{ {0.f, 0.f, 2.f}, 1.f };
-	Sphere sphere2{ {0.f, 0.f, 5.f}, 0.5f };
-
 	float aspectRatio = float(width) / float(height);
 	for (int j = 0; j < height; j++)
 	{

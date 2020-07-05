@@ -1,11 +1,13 @@
 #include "Sphere.h"
 
-Sphere::Sphere() : position({ 0.f, 0.f, 0.f }), radius(0.f)
+Sphere::Sphere()
+	: position({ 0.f, 0.f, 0.f }), radius(0.f)
 {
 	mat = new Material(Material::Type::MATTE, { 0.f, 1.f, 0.f }, 1.f);
 }
 
-Sphere::Sphere(const vec3& p, float r) : position(p), radius(r) 
+Sphere::Sphere(const vec3& p, const float r)
+	: position(p), radius(r) 
 {
 	mat = new Material(Material::Type::MATTE, { 0.f, 1.f, 0.f }, 1.f);
 }
@@ -16,6 +18,7 @@ Sphere::Sphere(const vec3& p, float r, Material* m) : position(p), radius(r), Pr
 }
 
 Sphere::Sphere(const Sphere& s)
+	: Primitive(s)
 {
 	position = s.position;
 	radius = s.radius;
@@ -24,7 +27,6 @@ Sphere::Sphere(const Sphere& s)
 
 Sphere::~Sphere()
 {
-	delete mat;
 }
 
 Sphere& Sphere::operator=(const Sphere& s)
@@ -45,7 +47,7 @@ void Sphere::SetRadius(const float r)
 	radius = r;
 }
 
-float Sphere::intersect(const Ray& ray) const
+float Sphere::Intersect(const Ray& ray) const
 {
 	vec3 diff = ray.getOrigin() - position;
 	float a = diff.dot(diff);
@@ -59,7 +61,7 @@ float Sphere::intersect(const Ray& ray) const
 	return t;
 }
 
-vec3 Sphere::calcNormal(const vec3& p) const
+vec3 Sphere::CalcNormal(const vec3& p) const
 {
 	//Primitive::calcNormal(p);
 	//Super::calcNormal(p); => UNREAL ENGINE

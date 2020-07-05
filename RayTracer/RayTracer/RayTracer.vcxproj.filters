@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Lib">
+      <UniqueIdentifier>{8f6698dd-d28f-4457-9c01-6212664abe6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Header">
+      <UniqueIdentifier>{1968b690-0ff5-44fa-af29-812543787bef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lib\Primitive">
+      <UniqueIdentifier>{b55a83b4-2655-4e0a-9bab-e81680b1bd96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Header\Primitive">
+      <UniqueIdentifier>{1322e5a3-b51f-4e91-99ca-026d4c7f3621}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bitmap.cpp">
@@ -41,6 +53,15 @@
     </ClCompile>
     <ClCompile Include="Ray.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Plane.cpp">
+      <Filter>Source Files\Lib\Primitive</Filter>
+    </ClCompile>
+    <ClCompile Include="Cube.cpp">
+      <Filter>Source Files\Lib\Primitive</Filter>
+    </ClCompile>
+    <ClCompile Include="Cylinder.cpp">
+      <Filter>Source Files\Lib\Primitive</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +97,15 @@
     </ClInclude>
     <ClInclude Include="Material.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Plane.h">
+      <Filter>Source Files\Header\Primitive</Filter>
+    </ClInclude>
+    <ClInclude Include="Cube.h">
+      <Filter>Source Files\Header\Primitive</Filter>
+    </ClInclude>
+    <ClInclude Include="Cylinder.h">
+      <Filter>Source Files\Header\Primitive</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
