@@ -1,4 +1,4 @@
-#include "Cylinder.h"
+#include "../Header/Primitive/Cylinder.h"
 
 Cylinder::Cylinder()
 	: axe({ 0.f, 1.f, 0.f }), radius(0.f)

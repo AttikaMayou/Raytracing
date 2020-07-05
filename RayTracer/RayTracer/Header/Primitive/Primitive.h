@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Material.h"
-#include "Ray.h"
+#include "../Material.h"
+#include "../Ray.h"
 #include <iostream>
 
 class Primitive {

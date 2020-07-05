@@ -1,4 +1,4 @@
-#include "vec3.h"
+#include "../Header/Utils/vec3.h"
 
 inline void vec3::setX(float x)
 {

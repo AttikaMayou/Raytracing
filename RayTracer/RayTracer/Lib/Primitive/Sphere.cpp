@@ -1,4 +1,4 @@
-﻿#include "Sphere.h"
+﻿#include "../Header/Primitive/Sphere.h"
 
 Sphere::Sphere()
 	: Primitive({ 0.f, 0.f, 0.f }, { 0.f, 0.f, 0.f }, { 1.f,1.f,1.f }), radius(0.f)

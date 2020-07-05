@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Sphere.h"
+#include "../Primitive/Primitive.h"
 
 struct Intersection 
 {
