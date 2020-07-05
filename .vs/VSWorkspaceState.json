@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\RayTracer",
+    "\\RayTracer\\RayTracer",
+    "\\RayTracer\\RayTracer\\Header",
+    "\\RayTracer\\RayTracer\\Header\\Primitive",
+    "\\RayTracer\\RayTracer\\Header\\Utils",
+    "\\RayTracer\\RayTracer\\Lib",
+    "\\RayTracer\\RayTracer\\Lib\\Primitive",
+    "\\RayTracer\\RayTracer\\Lib\\Utils"
+  ],
+  "SelectedNode": "\\RayTracer\\RayTracer\\Lib\\Utils\\Matrix.cpp",
+  "PreviewInSolutionExplorer": false
+}

@@ -147,37 +147,40 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Bitmap.cpp" />
-    <ClCompile Include="Cube.cpp" />
-    <ClCompile Include="Cylinder.cpp" />
-    <ClCompile Include="DirectionalLight.cpp" />
-    <ClCompile Include="Light.cpp" />
-    <ClCompile Include="Material.cpp" />
-    <ClCompile Include="Plane.cpp" />
-    <ClCompile Include="Primitive.cpp" />
-    <ClCompile Include="Ray.cpp" />
+    <ClCompile Include="Lib\Bitmap.cpp" />
+    <ClCompile Include="Lib\Camera.cpp" />
+    <ClCompile Include="Lib\Light\DirectionalLight.cpp" />
+    <ClCompile Include="Lib\Light\Light.cpp" />
+    <ClCompile Include="Lib\Material.cpp" />
+    <ClCompile Include="Lib\Primitive\Cube.cpp" />
+    <ClCompile Include="Lib\Primitive\Cylinder.cpp" />
+    <ClCompile Include="Lib\Primitive\Plane.cpp" />
+    <ClCompile Include="Lib\Primitive\Primitive.cpp" />
+    <ClCompile Include="Lib\Primitive\Sphere.cpp" />
+    <ClCompile Include="Lib\Ray.cpp" />
+    <ClCompile Include="Lib\Tracer.cpp" />
+    <ClCompile Include="Lib\Utils\Matrix.cpp" />
     <ClCompile Include="RayTracer.cpp" />
-    <ClCompile Include="Sphere.cpp" />
-    <ClCompile Include="Tracer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Background.h" />
-    <ClInclude Include="Bitmap.h" />
-    <ClInclude Include="Cube.h" />
-    <ClInclude Include="Cylinder.h" />
-    <ClInclude Include="DirectionalLight.h" />
-    <ClInclude Include="Intersection.h" />
-    <ClInclude Include="Light.h" />
-    <ClInclude Include="Material.h" />
-    <ClInclude Include="Plane.h" />
-    <ClInclude Include="Primitive.h" />
-    <ClInclude Include="Ray.h" />
-    <ClInclude Include="Sphere.h" />
-    <ClInclude Include="Tracer.h" />
-    <ClInclude Include="vec3.h" />
+    <ClInclude Include="Header\Background.h" />
+    <ClInclude Include="Header\Bitmap.h" />
+    <ClInclude Include="Header\Light\DirectionalLight.h" />
+    <ClInclude Include="Header\Light\Light.h" />
+    <ClInclude Include="Header\Material.h" />
+    <ClInclude Include="Header\Primitive\Cube.h" />
+    <ClInclude Include="Header\Primitive\Cylinder.h" />
+    <ClInclude Include="Header\Primitive\Plane.h" />
+    <ClInclude Include="Header\Primitive\Primitive.h" />
+    <ClInclude Include="Header\Primitive\Sphere.h" />
+    <ClInclude Include="Header\Ray.h" />
+    <ClInclude Include="Header\Tracer.h" />
+    <ClInclude Include="Header\Utils\Intersection.h" />
+    <ClInclude Include="Header\Utils\Matrix.h" />
+    <ClInclude Include="Header\Utils\vec3.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="vec3.inl" />
+    <None Include="Lib\Utils\vec3.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
