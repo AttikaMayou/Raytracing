@@ -3,7 +3,7 @@
 #include"vec3.h"
 #include "Primitive.h"
 
-class Light : primitive {
+class Light : Primitive {
 private:
 	vec3 position;
 	vec3 direction;

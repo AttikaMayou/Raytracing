@@ -13,7 +13,7 @@ int main(int argc, const char* argv[])
 	Bitmap bmp;
 	bmp.SetHeader(width, height);
 
-	Tracer tracer;
+	Tracer tracer = Tracer();
 
 	float aspectRatio = float(width) / float(height);
 	for (int j = 0; j < height; j++)
