@@ -3,6 +3,8 @@
 #include <cmath>
 #include <stdlib.h>
 
+#include "../RayTracer/Lib/Utils/vec3.inl"
+
 class vec3 {
 private : 
 	union
@@ -53,5 +55,3 @@ public :
 
 // equivalent a typedef vec3 color;
 using color = vec3;
-
-#include "vec3.inl"
