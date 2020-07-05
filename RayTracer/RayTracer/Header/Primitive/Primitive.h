@@ -11,6 +11,7 @@ private :
 	
 protected :
 	Matrix trans;
+	Matrix transInv;
 	vec3 position;
 	vec3 rotation;
 	vec3 scale;
@@ -30,6 +31,8 @@ public :
 	void RotateY(float deg);
 	void RotateZ(float deg);
 	void Scale(const float s);
+	vec3 LocalToGlobal(const vec3& v) const;
+	vec3 GlobalToLocal(const vec3& v) const;
 
 	vec3 GetPosition() const { return position; };
 	vec3 GetRotation() const { return rotation; };

@@ -5,8 +5,14 @@ Tracer::Tracer()
 	mat = new Material(Material::Type::MATTE, vec3{ 1.f, 0.f, 0.f }, 1.f);
 	Material* mate = new Material(Material::Type::DIELECTRIC, vec3{ 0.f, 1.f, 0.f }, 1.f);
 
-	scene.push_back(new Sphere( {0.f, 0.f, -1.f}, 0.5f, mat));
+	Sphere sphere1 = Sphere({ 0.f, 0.f, -1.f }, 0.5f, mat);
+	
+	scene.push_back(&sphere1);
 	scene.push_back(new Sphere({ 0.f, 10.f, -5.f }, 10.f, mate));
+
+	Sphere translateSphere = Sphere(sphere1);
+	translateSphere.Translate({ 0.f, 2.f, 0.f });
+	scene.push_back(&translateSphere);
 	/*scene.push_back({ {0.f, 0.f, 5.f}, 0.5f });
 	scene.push_back({ {-0.5f, -0.5f, 1.f}, 0.2f });
 	scene.push_back({ {1.f, 1.f, 4.f}, 1.f });

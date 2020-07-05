@@ -32,6 +32,7 @@ struct Matrix
 	static Matrix Scale(float scale);
 
 	vector<float> identity(Matrix& const m);
+	Matrix inverse() const;
 	void swap(Matrix& m);
 
 	float& operator()(size_t i, size_t j);

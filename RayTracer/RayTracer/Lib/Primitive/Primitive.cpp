@@ -60,6 +60,7 @@ void Primitive::Translate(const vec3& t)
 	mTranslation(2, 3) = t.getZ();
 
 	trans = mTranslation * trans;
+	transInv = trans.inverse();
 }
 
 void Primitive::RotateX(float deg)
@@ -71,6 +72,7 @@ void Primitive::RotateX(float deg)
 	mRotation(2, 2) = cos(deg);
 
 	trans = mRotation * trans;
+	transInv = trans.inverse();
 }
 
 void Primitive::RotateY(float deg)
@@ -82,6 +84,7 @@ void Primitive::RotateY(float deg)
 	mRotation(2, 2) = cos(deg);
 
 	trans = mRotation * trans;
+	transInv = trans.inverse();
 }
 
 void Primitive::RotateZ(float deg)
@@ -93,6 +96,7 @@ void Primitive::RotateZ(float deg)
 	mRotation(1, 1) = cos(deg);
 
 	trans = mRotation * trans;
+	transInv = trans.inverse();
 }
 
 void Primitive::Scale(const float s)
@@ -103,6 +107,21 @@ void Primitive::Scale(const float s)
 	mScale(2, 2) = s;
 
 	trans = mScale * trans;
+	transInv = trans.inverse();
+}
+
+vec3 Primitive::LocalToGlobal(const vec3& v) const
+{
+	vec3 l = { v.getX(), v.getY(), v.getZ() };
+
+	return l;
+}
+
+vec3 Primitive::GlobalToLocal(const vec3& v) const
+{
+	vec3 g;
+
+	return g;
 }
 
 void Primitive::SetPosition(const vec3& p)

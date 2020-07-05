@@ -107,6 +107,13 @@ vector<float> Matrix::identity(Matrix& const m)
 	return getData(m);
 }
 
+Matrix Matrix::inverse() const
+{
+	Matrix inv;
+
+	return inv;
+}
+
 void Matrix::swap(Matrix& m) {
 	std::swap(data, m.data);
 	std::swap(row, m.row);
