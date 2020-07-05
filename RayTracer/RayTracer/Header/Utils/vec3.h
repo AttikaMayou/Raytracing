@@ -54,4 +54,4 @@ public :
 // equivalent a typedef vec3 color;
 using color = vec3;
 
-#include "../RayTracer/Lib/Utils/vec3.inl"
+#include "../../Lib/Utils/vec3.inl"

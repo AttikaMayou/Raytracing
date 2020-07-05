@@ -1,4 +1,4 @@
-#include "../Header/Primitive/Cube.h"
+#include "../../Header/Primitive/Cube.h"
 
 Cube::Cube()
 	: size(0.f)

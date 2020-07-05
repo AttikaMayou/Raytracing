@@ -1,4 +1,4 @@
-#include "../Header/Primitive/Plane.h"
+#include "../../Header/Primitive/Plane.h"
 
 Plane::Plane()
 	: axe({1.f, 1.f, 0.f})

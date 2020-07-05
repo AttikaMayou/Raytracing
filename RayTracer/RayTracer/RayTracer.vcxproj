@@ -147,6 +147,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Lib\Bitmap.cpp" />
+    <ClCompile Include="Lib\Camera.cpp" />
+    <ClCompile Include="Lib\Light\DirectionalLight.cpp" />
+    <ClCompile Include="Lib\Light\Light.cpp" />
+    <ClCompile Include="Lib\Material.cpp" />
+    <ClCompile Include="Lib\Primitive\Cube.cpp" />
+    <ClCompile Include="Lib\Primitive\Cylinder.cpp" />
+    <ClCompile Include="Lib\Primitive\Plane.cpp" />
+    <ClCompile Include="Lib\Primitive\Primitive.cpp" />
+    <ClCompile Include="Lib\Primitive\Sphere.cpp" />
+    <ClCompile Include="Lib\Ray.cpp" />
+    <ClCompile Include="Lib\Tracer.cpp" />
+    <ClCompile Include="Lib\Utils\Matrix.cpp" />
     <ClCompile Include="RayTracer.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +178,9 @@
     <ClInclude Include="Header\Utils\Intersection.h" />
     <ClInclude Include="Header\Utils\Matrix.h" />
     <ClInclude Include="Header\Utils\vec3.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Lib\Utils\vec3.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

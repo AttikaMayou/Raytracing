@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Background.h"
+#include "Primitive/Sphere.h"
 #include "Utils/Intersection.h"
 #include <vector>
 
