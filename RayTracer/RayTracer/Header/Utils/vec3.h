@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cmath>
+#include <stdlib.h>
 
 class vec3 {
 private : 
@@ -38,12 +39,16 @@ public :
 	inline void setZ(float z);
 
 	inline vec3& operator=(const vec3& v);
-	inline vec3 operator*(const float t) const;
+	inline vec3 operator*(const float t) const; 
+	inline vec3 operator/(const float t) const;
 	inline vec3 operator+(const vec3& rhs) const;
+	inline vec3 operator+=(const vec3& rhs) const;
 	inline vec3 operator-(const vec3& rhs) const;
 	inline vec3 operator*(const vec3& rhs) const;
 	inline float dot(const vec3& rhs) const;
 	inline vec3& normalize();
+	inline float norm();
+	inline float getDistance(const vec3& other);
 };
 
 // equivalent a typedef vec3 color;

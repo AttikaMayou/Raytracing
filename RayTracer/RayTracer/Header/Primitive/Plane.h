@@ -18,6 +18,6 @@ public :
 	vec3 GetAxe() const { return axe; };
 	void SetAxe(const vec3& a);
 
-	float Intersect(const Ray& ray) const override;
+	bool Intersect(const Ray& ray, vec3& impact) const override;
 	virtual vec3 CalcNormal(const vec3& p) const override;	
 };

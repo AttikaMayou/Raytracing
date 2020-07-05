@@ -75,6 +75,9 @@
     <ClCompile Include="Tracer.cpp">
       <Filter>Source Files\Lib</Filter>
     </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files\Lib</Filter>
+    </ClCompile>
     <ClCompile Include="Lib\Matrix.cpp">
       <Filter>Source Files\Lib\Utils</Filter>
     </ClCompile>
@@ -124,6 +127,12 @@
     </ClInclude>
     <ClInclude Include="Intersection.h">
       <Filter>Source Files\Header\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Cylinder.h">
+      <Filter>Source Files\Header\Primitive</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Source Files\Header</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

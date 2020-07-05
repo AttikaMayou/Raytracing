@@ -21,7 +21,7 @@ public :
 	void SetAxe(const vec3& a);
 	void SetRadius(const float r);
 
-	float Intersect(const Ray& ray) const override;
+	bool Intersect(const Ray& ray, vec3& impact) const override;
 	virtual vec3 CalcNormal(const vec3& p) const override;
 	
 };

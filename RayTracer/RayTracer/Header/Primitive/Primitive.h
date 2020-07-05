@@ -2,6 +2,7 @@
 
 #include "Material.h"
 #include "Ray.h"
+#include <iostream>
 
 class Primitive {
 
@@ -36,6 +37,6 @@ public :
 	void SetScale(const vec3& s);
 	void SetMaterial(Material* m);
 	
-	virtual float Intersect(const Ray& ray) const = 0;
+	virtual bool Intersect(const Ray& ray, vec3 &impact) const = 0;
 	virtual vec3 CalcNormal(const vec3& p) const = 0;
 };

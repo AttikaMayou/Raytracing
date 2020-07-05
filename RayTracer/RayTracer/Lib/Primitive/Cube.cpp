@@ -43,9 +43,9 @@ void Cube::SetSize(const float s)
 	size = s;
 }
 
-float Cube::Intersect(const Ray& ray) const
+bool Cube::Intersect(const Ray& ray, vec3& impact) const
 {
-	return 0.f;
+	return false;
 }
 
 vec3 Cube::CalcNormal(const vec3& p) const

@@ -40,11 +40,11 @@ void Plane::SetAxe(const vec3& a)
 	axe = a;
 }
 
-float Plane::Intersect(const Ray& ray) const
+bool Plane::Intersect(const Ray& ray, vec3& impact) const
 {
 	float t = 0.f;
 	
-	return t;
+	return false;
 }
 
 vec3 Plane::CalcNormal(const vec3& p) const

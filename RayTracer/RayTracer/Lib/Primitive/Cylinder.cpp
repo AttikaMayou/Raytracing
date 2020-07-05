@@ -50,9 +50,9 @@ void Cylinder::SetRadius(const float r)
 	radius = r;
 }
 
-float Cylinder::Intersect(const Ray& ray) const
+bool Cylinder::Intersect(const Ray& ray, vec3& impact) const
 {
-	return 0.f;
+	return false;
 }
 
 vec3 Cylinder::CalcNormal(const vec3& p) const
