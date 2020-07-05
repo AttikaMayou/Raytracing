@@ -42,7 +42,9 @@ void Plane::SetAxe(const vec3& a)
 
 float Plane::Intersect(const Ray& ray) const
 {
-	return 0.f;
+	float t = 0.f;
+	
+	return t;
 }
 
 vec3 Plane::CalcNormal(const vec3& p) const

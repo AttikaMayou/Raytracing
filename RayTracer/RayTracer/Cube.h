@@ -5,7 +5,6 @@
 class Cube : public Primitive
 {
 private :
-	vec3 position;
 	float size;
 
 public:
@@ -15,9 +14,7 @@ public:
 	Cube(const Cube& c);
 	virtual ~Cube();
 	Cube& operator=(const Cube& c);
-	vec3 GetPosition() const { return position; };
 	float GetSize() const { return size; };
-	void SetPosition(const vec3& p);
 	void SetSize(const float s);
 
 	float Intersect(const Ray& ray) const override;

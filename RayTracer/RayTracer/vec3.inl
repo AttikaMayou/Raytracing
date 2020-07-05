@@ -1,4 +1,5 @@
 #include "vec3.h"
+
 inline void vec3::setX(float x)
 {
 	_x = x;

@@ -1,7 +1,7 @@
 #include "Cube.h"
 
 Cube::Cube()
-	: position({ 0.f, 0.f, 0.f }), size(0.f)
+	: size(0.f)
 {
 	mat = new Material(Material::Type::MATTE, { 0.f, 1.f, 0.f }, 1.f);
 }

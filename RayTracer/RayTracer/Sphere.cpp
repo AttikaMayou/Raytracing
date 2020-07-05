@@ -1,19 +1,19 @@
 #include "Sphere.h"
 
 Sphere::Sphere()
-	: position({ 0.f, 0.f, 0.f }), radius(0.f)
+	: radius(0.f)
 {
 	mat = new Material(Material::Type::MATTE, { 0.f, 1.f, 0.f }, 1.f);
 }
 
 Sphere::Sphere(const vec3& p, const float r)
-	: position(p), radius(r) 
+	: Primitive(p), radius(r) 
 {
 	mat = new Material(Material::Type::MATTE, { 0.f, 1.f, 0.f }, 1.f);
 }
 
 Sphere::Sphere(const vec3& p, float r, Material* m)
-	: Primitive(m), position(p), radius(r)
+	: Primitive(m), radius(r)
 {
 
 }
@@ -32,15 +32,8 @@ Sphere::~Sphere()
 
 Sphere& Sphere::operator=(const Sphere& s)
 {
-	position = s.position;
 	radius = s.radius;
-	mat = s.mat;
 	return *this;
-}
-
-void Sphere::SetPosition(const vec3& p)
-{
-	position = p;
 }
 
 void Sphere::SetRadius(const float r)
