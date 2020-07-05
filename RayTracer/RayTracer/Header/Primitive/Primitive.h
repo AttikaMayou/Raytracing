@@ -2,12 +2,16 @@
 
 #include "../Material.h"
 #include "../Ray.h"
+#include "../Utils/Matrix.h"
 #include <iostream>
 
 class Primitive {
 
 private :
+	
 protected :
+	Matrix trans;
+	//Matrix transInv;
 	vec3 position;
 	vec3 rotation;
 	vec3 scale;
@@ -26,7 +30,7 @@ public :
 	void RotateX(float deg);
 	void RotateY(float deg);
 	void RotateZ(float deg);
-	void Scale(const vec3& s);
+	void Scale(const float s);
 	vec3 LocalToGlobal(const vec3& v) const;
 
 	vec3 GetPosition() const { return position; };

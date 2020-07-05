@@ -54,22 +54,56 @@ Primitive::~Primitive()
 
 void Primitive::Translate(const vec3& t)
 {
+	Matrix mTranslation;
+	mTranslation(0, 3) = t.getX();
+	mTranslation(1, 3) = t.getY();
+	mTranslation(2, 3) = t.getZ();
+
+	trans = mTranslation * trans;
+	//transInv = trans.inverse();
 }
 
 void Primitive::RotateX(float deg)
 {
+	Matrix mRotation;
+	mRotation(1, 1) = cos(deg);
+	mRotation(2, 1) = sin(deg);
+	mRotation(1, 2) = -sin(deg);
+	mRotation(2, 2) = cos(deg);
+
+	trans = mRotation * trans;
 }
 
 void Primitive::RotateY(float deg)
 {
+	Matrix mRotation;
+	mRotation(0, 0) = cos(deg);
+	mRotation(0, 2) = sin(deg);
+	mRotation(2, 0) = -sin(deg);
+	mRotation(2, 2) = cos(deg);
+
+	trans = mRotation * trans;
 }
 
 void Primitive::RotateZ(float deg)
 {
+	Matrix mRotation;
+	mRotation(0, 0) = cos(deg);
+	mRotation(1, 0) = sin(deg);
+	mRotation(0, 1) = -sin(deg);
+	mRotation(1, 1) = cos(deg);
+
+	trans = mRotation * trans;
 }
 
-void Primitive::Scale(const vec3& s)
+void Primitive::Scale(const float s)
 {
+	Matrix mScale;
+	mScale(0, 0) = s;
+	mScale(1, 1) = s;
+	mScale(2, 2) = s;
+
+	trans = mScale * trans;
 }
 
 vec3 Primitive::LocalToGlobal(const vec3& v) const

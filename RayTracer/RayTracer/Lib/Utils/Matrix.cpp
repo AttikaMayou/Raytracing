@@ -16,7 +16,7 @@ Matrix::Matrix(size_t rows, size_t cols)
 	data = identity(*this);
 }
 
-Matrix::Matrix(vector<double>& const d, size_t rows, size_t cols)
+Matrix::Matrix(vector<float>& const d, size_t rows, size_t cols)
 {
 	row = rows;
 	col = cols;
@@ -77,7 +77,7 @@ Matrix Matrix::Translate(float x, float y)
 
 Matrix Matrix::Rotate(float angle)
 {
-	float DegToRad = 0.01745328888889;
+	const float DegToRad = 0.01745328888889;
 
 	Matrix r(2, 3);
 	r(0, 0) = cos(angle * DegToRad);
@@ -95,7 +95,7 @@ Matrix Matrix::Scale(float scale)
 	return s;
 }
 
-vector<double> Matrix::identity(Matrix& const m)
+vector<float> Matrix::identity(Matrix& const m)
 {
 	for (int i = 0; i < m.getRow(); ++i)
 	{
@@ -107,18 +107,25 @@ vector<double> Matrix::identity(Matrix& const m)
 	return getData(m);
 }
 
+Matrix Matrix::inverse() const
+{
+	Matrix inv;
+
+	return inv;
+}
+
 void Matrix::swap(Matrix& m) {
 	std::swap(data, m.data);
 	std::swap(row, m.row);
 	std::swap(col, m.col);
 }
 
-double& Matrix::operator()(size_t i, size_t j)
+float& Matrix::operator()(size_t i, size_t j)
 {
 	return data[i * col + j];
 }
 
-double Matrix::operator()(size_t i, size_t j) const
+float Matrix::operator()(size_t i, size_t j) const
 {
 	return data[i * col + j];
 }
@@ -188,14 +195,6 @@ Matrix& Matrix::operator=(Matrix& const m)
 	swap(tmp);
 	return *this;
 }
-
-/*Vertex Matrix::operator*(Vertex v)
-{
-	Vertex newVertex(Color(v.r, v.g, v.b));
-	newVertex.x = this->data[0] * v.x + this->data[1] * v.y + this->data[2] * 1;
-	newVertex.y = this->data[3] * v.x + this->data[4] * v.y + this->data[5] * 1;
-	return newVertex;
-}*/
 
 Matrix operator*(Matrix& const m, Matrix& const m2)
 {
