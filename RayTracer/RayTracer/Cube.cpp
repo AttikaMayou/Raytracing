@@ -7,13 +7,13 @@ Cube::Cube()
 }
 
 Cube::Cube(const vec3& p, const float s)
-	: position(p), size(s)
+	: size(s)
 {
 	mat = new Material(Material::Type::MATTE, { 0.f, 1.f, 0.f }, 1.f);
 }
 
 Cube::Cube(const vec3& p, const float s, Material* m)
-	: Primitive(m), position(p), size(s)
+	: Primitive(m), size(s)
 {
 	
 }

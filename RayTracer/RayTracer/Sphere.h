@@ -4,7 +4,6 @@
 
 class Sphere : public Primitive {
 private :
-	vec3 position;
 	float radius;
 
 public :
@@ -14,9 +13,7 @@ public :
 	Sphere(const Sphere& s);
 	virtual ~Sphere();
 	Sphere& operator=(const Sphere& s);
-	vec3 GetPosition() const { return position; }
 	float GetRadius() const { return radius; }
-	void SetPosition(const vec3& p);
 	void SetRadius(const float r);
 
 	// retourne la distance d'intersection (t) si le discriminant est positif

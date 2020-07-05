@@ -14,6 +14,8 @@ protected :
 public :
 	Primitive();
 	Primitive(Material* m);
+	Primitive(const vec3& p, const vec3& r, const vec3& s);
+	Primitive(const vec3& p, const vec3& r, const vec3& s, Material* m);
 	Primitive(const Primitive& p);
 	Primitive& operator=(const Primitive& p);
 	virtual ~Primitive();
@@ -28,7 +30,7 @@ public :
 	vec3 GetPosition() const { return position; };
 	vec3 GetRotation() const { return rotation; };
 	vec3 GetScale() const { return scale; };
-	Material* GetMaterial() const;
+	Material* GetMaterial() const { return mat; };
 	void SetPosition(const vec3& p);
 	void SetRotation(const vec3& r);
 	void SetScale(const vec3& s);
