@@ -1,4 +1,4 @@
-#include "Light.h"
+#include "../../Header/Light/Light.h"
 
 Light::Light(const Light& l)
 	: position(l.position), direction(l.direction)

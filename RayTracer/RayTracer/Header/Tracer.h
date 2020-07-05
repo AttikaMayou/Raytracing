@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Background.h"
-#include "Intersection.h"
+#include "Utils/Intersection.h"
 #include <vector>
 
 //TODO : récupérer tous les trucs imports du main (background, spheres...) 

@@ -1,7 +1,7 @@
 #pragma once
 
-#include"vec3.h"
-#include "Primitive.h"
+#include "../Utils/vec3.h"
+#include "../Primitive/Primitive.h"
 
 class Light : Primitive {
 private:

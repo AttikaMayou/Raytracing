@@ -1,4 +1,4 @@
-#include "Bitmap.h"
+#include "../Header/Bitmap.h"
 
 Bitmap::Bitmap() {
 	//file.open("rendu.ppm");
