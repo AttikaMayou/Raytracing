@@ -13,7 +13,7 @@ Sphere::Sphere(const vec3& p, const float r)
 }
 
 Sphere::Sphere(const vec3& p, float r, Material* m)
-	: Primitive(m), radius(r)
+	: Primitive(p, { 0.f, 0.f, 0.f }, { 1.f,1.f,1.f }, m), radius(r)
 {
 
 }
