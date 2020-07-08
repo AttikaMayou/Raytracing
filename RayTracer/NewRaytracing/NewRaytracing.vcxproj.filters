@@ -78,11 +78,17 @@
     <ClCompile Include="Sphere.cpp">
       <Filter>Fichiers sources\Objects</Filter>
     </ClCompile>
-    <ClCompile Include="Scene.cpp">
-      <Filter>Fichiers sources\Objects</Filter>
-    </ClCompile>
     <ClCompile Include="Utils.cpp">
       <Filter>Fichiers sources\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Box.cpp">
+      <Filter>Fichiers sources\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectsList.cpp">
+      <Filter>Fichiers sources\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Faces.cpp">
+      <Filter>Fichiers sources\Objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -137,7 +143,13 @@
     <ClInclude Include="Intersects.h">
       <Filter>Fichiers d%27en-tête\Objects</Filter>
     </ClInclude>
-    <ClInclude Include="Scene.h">
+    <ClInclude Include="Box.h">
+      <Filter>Fichiers d%27en-tête\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectsList.h">
+      <Filter>Fichiers d%27en-tête\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Faces.h">
       <Filter>Fichiers d%27en-tête\Objects</Filter>
     </ClInclude>
   </ItemGroup>

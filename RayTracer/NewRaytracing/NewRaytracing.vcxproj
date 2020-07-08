@@ -147,11 +147,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Box.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CheckerboardTexture.cpp" />
     <ClCompile Include="Dielectric.cpp" />
     <ClCompile Include="DiffuseLight.cpp" />
-    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Faces.cpp" />
+    <ClCompile Include="ObjectsList.cpp" />
     <ClCompile Include="ImageTexture.cpp" />
     <ClCompile Include="Lambertian.cpp" />
     <ClCompile Include="Material.cpp" />
@@ -163,15 +165,17 @@
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Box.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CheckerboardTexture.h" />
+    <ClInclude Include="Faces.h" />
     <ClInclude Include="UniColorTexture.h" />
     <ClInclude Include="Dielectric.h" />
     <ClInclude Include="DiffuseLight.h" />
     <ClInclude Include="external\stb_image.h" />
     <ClInclude Include="external\stb_image_write.h" />
     <ClInclude Include="Intersects.h" />
-    <ClInclude Include="Scene.h" />
+    <ClInclude Include="ObjectsList.h" />
     <ClInclude Include="ImageTexture.h" />
     <ClInclude Include="Lambertian.h" />
     <ClInclude Include="Material.h" />

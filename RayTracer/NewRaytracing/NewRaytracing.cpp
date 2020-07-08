@@ -15,8 +15,11 @@ using namespace std;
 
 #include "Camera.h"
 #include "Utils.h"
-#include "Scene.h"
+
+// OBJECTS
+#include "ObjectsList.h"
 #include "Sphere.h"
+#include "Box.h"
 
 // MATERIAL
 #include "Lambertian.h"
@@ -69,10 +72,10 @@ void createJpg(int width, int height, int channels, int nbImg) {
 	stbi_write_png(filename.c_str(), width, height, channels, data, width * channels);
 }
 
-vec3 colorMap(const Ray& ray, Intersects* world, int depth) {
+vec3 colorMap(const Ray& ray, ObjectsList world, int depth) {
 	IntersectRecord rec;
 
-	if (world->hit(ray, 0.001f, 999999.f, rec)) {
+	if (world.hit(ray, 0.001f, 999999.f, rec)) {
 		Ray scattered;
 		vec3 attenuation;
 		vec3 emitted = rec.mat->emitted(rec.u, rec.v, rec.point);
@@ -88,7 +91,7 @@ vec3 colorMap(const Ray& ray, Intersects* world, int depth) {
 		//return vec3(rec.normal.getX() + 1, rec.normal.getY() + 1, rec.normal.getZ() + 1) * 0.5;
 	}
 	else {
-		return vec3(0.7, 0.8, 1.0);
+		return vec3(0, 0, 0);
 		/*
 		vec3 unitDirection = unitVector(ray.getDirection());
 		float t = (unitDirection.getY() + 1) * 0.5;
@@ -97,7 +100,7 @@ vec3 colorMap(const Ray& ray, Intersects* world, int depth) {
 	}
 }
 
-thread processImage(int nbProcess, float width, float height, float widthStart, float widthEnd, int nbImg, const Camera cam, Intersects* world) {
+thread processImage(int nbProcess, float width, float height, float widthStart, float widthEnd, int nbImg, const Camera cam, ObjectsList world) {
 	std::thread thread([nbProcess, width, height, widthStart, widthEnd, nbImg, cam, world]() {
 		int iterAntiAliasing = 100;
 
@@ -148,12 +151,36 @@ thread processImage(int nbProcess, float width, float height, float widthStart, 
 //	}
 //}
 
+ObjectsList GetScene() {
+	ObjectsList listObjects;
+
+	Material* red = new Lambertian(new UniColorTexture(vec3(.65, .05, .05)));
+	Material* white = new Lambertian(new UniColorTexture(vec3(.73, .73, .73)));
+	Material* green = new Lambertian(new UniColorTexture(vec3(.12, .45, .15)));
+	Material* light = new DiffuseLight(new UniColorTexture(vec3(15, 15, 15)));
+
+	listObjects.Add(new FlipFace(new RectYZ(0, 555, 0, 555, 555, green)));
+	listObjects.Add(new RectYZ(0, 555, 0, 555, 0, red));
+	listObjects.Add(new RectXZ(213, 343, 227, 332, 554, light));
+	listObjects.Add(new FlipFace(new RectXZ(0, 555, 0, 555, 555, white)));
+	listObjects.Add(new RectXZ(0, 555, 0, 555, 0, white));
+	listObjects.Add(new FlipFace(new RectXY(0, 555, 0, 555, 555, white)));
+
+	Intersects* box1 = new Box(vec3(0, 0, 0), vec3(165, 330, 165), white);
+	listObjects.Add(box1);
+
+	Intersects* box2 = new Box(vec3(0, 0, 0), vec3(165, 165, 165), white);
+	listObjects.Add(box2);
+
+	return listObjects;
+}
+
 int main() {
-	int nbProcess = 4;
+	int nbProcess = 6;
 	int nbImg = 1;
 
-	const int width = 600;
-	const int height = 600;
+	const int width = 300;
+	const int height = 150;
 
 	for (int indexImg = 0; indexImg < nbImg; ++indexImg) {
 		threads.clear();
@@ -170,22 +197,34 @@ int main() {
 
 		float widthPart = width / nbProcess;
 
-		Camera cam(vec3(0, 0, 1), vec3(0, 0, -1), vec3(0, 1, 0), 90, float(width / height));
+		Camera cam(vec3(278, 278, -800), vec3(278, 278, 0), vec3(0, 1, 0), 40, float(width / height));
 
 		int texWidth, texHeight, textChan;
 		unsigned char* textureData = stbi_load("texture.jpg", &texWidth, &texHeight, &textChan, 0);
 
-		Intersects* list[2];
-		list[0] = new Sphere(vec3(0, 0, -1), 0.5, new Lambertian(new ImageTexture(textureData, texWidth, texHeight)));
-		list[1] = new Sphere(vec3(0, -100.5, -1), 100, new Lambertian(
+		vector<Intersects*> list;
+		//new ImageTexture(textureData, texWidth, texHeight);
+		//list.push_back(new Sphere(vec3(0, 2, 0), 2, new Lambertian(new UniColorTexture(vec3(1.0, 0.3, 0.5)))));
+		list.push_back(new Sphere(vec3(0, -1000, 0), 1000, new Lambertian(
 			new CheckerboardTexture(new UniColorTexture(vec3(0.1, 0.3, 0.8)), new UniColorTexture(vec3(0.8, 0.2, 0.2)))
-		));
+		)));
+		//list.push_back(new Sphere(vec3(0, 3, -1), 1, new DiffuseLight(new UniColorTexture(vec3(4, 4, 4)))));
+		list.push_back(new RectXY(3, 5, 1, 3, -2, new DiffuseLight(new UniColorTexture(vec3(4, 4, 4)))));
+
 		//list[2] = new Sphere(vec3(1, 0, -1), 0.5, new Metal(vec3(0.8, 0.6, 0.2), 0.1));
 		//list[3] = new Sphere(vec3(-1, 0, -1), 0.5, new Dielectric(1.5));
 		//list[2] = new Sphere(vec3(0, 3, -1), 1, new DiffuseLight(new ConstantTexture(vec3(4,4,4))));
 		//list[4] = new Sphere(vec3(-1, 0, -1), -0.45, new Dielectric(1.5));
+		/*
 
-		Intersects* world = new Scene(list, 2);
+		list.clear();
+		*/
+		Texture* redTex = new UniColorTexture(vec3(0.9, 0.0, 0.0));
+		Material* redMat = new Lambertian(redTex);
+		list.push_back(new Box(vec3(1, 7, 10), vec3(-6, -7, -15), redMat));
+		list.push_back(new Box(vec3(1, 1, 1), vec3(-6, -6, -6), redMat));
+		
+		ObjectsList world = GetScene();
 
 		for (int i = 0; i < nbProcess; i++) {
 			threads[i] = processImage(i, width, height, widthPart * i, widthPart * i + widthPart, indexImg, cam, world);
