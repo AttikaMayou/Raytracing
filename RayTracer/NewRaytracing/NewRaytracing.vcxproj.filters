@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Materials">
+      <UniqueIdentifier>{203b3cfc-9ead-4616-bfc6-aca9ca8f59cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Textures">
+      <UniqueIdentifier>{493dceb2-b7bd-454c-87bb-d1d3bde27871}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Utils">
+      <UniqueIdentifier>{745104da-e2bc-4a59-bbe2-59e73a87f94a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\External">
+      <UniqueIdentifier>{78a97ff5-2387-4c03-8a8a-968ec4df18e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Utils">
+      <UniqueIdentifier>{3d4b209f-fe3c-42a6-a036-14ffa3bbbe81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Materials">
+      <UniqueIdentifier>{3d228c34-37c7-4330-a2cf-13330398c206}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Textures">
+      <UniqueIdentifier>{cf817545-3220-43a6-a410-739cddbe9782}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Objects">
+      <UniqueIdentifier>{ea6d84d6-c541-474b-a3c6-2c9ad8dfe123}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Objects">
+      <UniqueIdentifier>{12471244-5795-4d63-8826-e47b1422ac55}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NewRaytracing.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Ray.cpp">
+      <Filter>Fichiers sources\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageTexture.cpp">
+      <Filter>Fichiers sources\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="Dielectric.cpp">
+      <Filter>Fichiers sources\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="DiffuseLight.cpp">
+      <Filter>Fichiers sources\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="Lambertian.cpp">
+      <Filter>Fichiers sources\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>Fichiers sources\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="Metal.cpp">
+      <Filter>Fichiers sources\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="UniColorTexture.cpp">
+      <Filter>Fichiers sources\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckerboardTexture.cpp">
+      <Filter>Fichiers sources\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>Fichiers sources\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Fichiers sources\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Fichiers sources\Utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="DiffuseLight.h">
+      <Filter>Fichiers d%27en-tête\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>Fichiers d%27en-tête\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="Lambertian.h">
+      <Filter>Fichiers d%27en-tête\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageTexture.h">
+      <Filter>Fichiers d%27en-tête\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="Dielectric.h">
+      <Filter>Fichiers d%27en-tête\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Fichiers d%27en-tête\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Fichiers d%27en-tête\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Ray.h">
+      <Filter>Fichiers d%27en-tête\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Metal.h">
+      <Filter>Fichiers d%27en-tête\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="external\stb_image_write.h">
+      <Filter>Fichiers d%27en-tête\External</Filter>
+    </ClInclude>
+    <ClInclude Include="external\stb_image.h">
+      <Filter>Fichiers d%27en-tête\External</Filter>
+    </ClInclude>
+    <ClInclude Include="vec3.h">
+      <Filter>Fichiers d%27en-tête\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="UniColorTexture.h">
+      <Filter>Fichiers d%27en-tête\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckerboardTexture.h">
+      <Filter>Fichiers d%27en-tête\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>Fichiers d%27en-tête\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersects.h">
+      <Filter>Fichiers d%27en-tête\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Fichiers d%27en-tête\Objects</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vec3.inl">
+      <Filter>Fichiers sources\Utils</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,32 @@
+﻿  Dielectric.cpp
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\Dielectric.cpp(22,18): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  DiffuseLight.cpp
+  Scene.cpp
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\Scene.cpp(18,29): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+  Lambertian.cpp
+  Material.cpp
+  Metal.cpp
+  NewRaytracing.cpp
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\Camera.h(6,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\NewRaytracing.cpp(50,14): warning C4101: 'b' : variable locale non référencée
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\NewRaytracing.cpp(51,10): warning C4101: 'ig' : variable locale non référencée
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\NewRaytracing.cpp(51,6): warning C4101: 'ir' : variable locale non référencée
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\NewRaytracing.cpp(51,14): warning C4101: 'ib' : variable locale non référencée
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\NewRaytracing.cpp(50,11): warning C4101: 'g' : variable locale non référencée
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\NewRaytracing.cpp(50,8): warning C4101: 'r' : variable locale non référencée
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\NewRaytracing.cpp(91,28): warning C4305: 'argument' : troncation de 'double' à 'float'
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\NewRaytracing.cpp(104,14): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\NewRaytracing.cpp(106,15): warning C4244: 'initialisation' : conversion de 'const float' en 'int', perte possible de données
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\NewRaytracing.cpp(118,17): warning C4244: 'argument' : conversion de 'int' en 'const float', perte possible de données
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\NewRaytracing.cpp(171,19): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\NewRaytracing.cpp(181,66): warning C4305: 'argument' : troncation de 'double' à 'float'
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\NewRaytracing.cpp(181,108): warning C4305: 'argument' : troncation de 'double' à 'float'
+  Sphere.cpp
+  UniColorTexture.cpp
+  Utils.cpp
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\Utils.cpp(4,24): warning C4244: 'return' : conversion de 'double' en 'float', perte possible de données
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\Utils.cpp(23,10): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\Utils.cpp(44,8): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\NewRaytracing\Utils.cpp(45,25): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  Génération de code en cours...
+  NewRaytracing.vcxproj -> D:\OneDrive\Documents\ESGI 4eme année\RayTracing\NewRaytracing\Debug\NewRaytracing.exe
