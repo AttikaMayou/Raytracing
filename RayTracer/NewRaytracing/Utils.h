@@ -14,6 +14,10 @@ class Utils {
 public:
 	static float randFloat();
 
+	static float randFloat(int min, int max);
+
+	static vec3 randInUnitDisk();
+
 	static vec3 randInUnitSphere();
 
 	static vec3 reflect(const vec3& v, const vec3& n);

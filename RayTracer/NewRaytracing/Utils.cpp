@@ -1,8 +1,20 @@
 #include "Utils.h"
 
 float Utils::randFloat() {
-	return (double)rand() / RAND_MAX;
-};
+	return (double)rand() / (RAND_MAX + 1.0);
+}
+
+float Utils::randFloat(int min, int max) {
+	return min + (max - min) * randFloat();
+}
+
+vec3 Utils::randInUnitDisk() {
+	while (true) {
+		auto p = vec3(Utils::randFloat(-1, 1), Utils::randFloat(-1, 1), 0);
+		if (p.squareLenght() >= 1) continue;
+		return p;
+	}
+}
 
 vec3 Utils::randInUnitSphere() {
 	vec3 p;
