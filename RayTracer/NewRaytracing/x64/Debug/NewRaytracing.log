@@ -1,4 +1,6 @@
-﻿  Menu.cpp
+﻿  FileParser.cpp
 D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\Camera.h(6,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
 D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\Camera.h(7,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\FileParser.cpp(44,32): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\FileParser.cpp(84,64): warning C4305: 'argument' : troncation de 'double' à 'float'
   NewRaytracing.vcxproj -> D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\x64\Debug\NewRaytracing.exe

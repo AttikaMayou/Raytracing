@@ -153,6 +153,7 @@
     <ClCompile Include="Dielectric.cpp" />
     <ClCompile Include="DiffuseLight.cpp" />
     <ClCompile Include="Faces.cpp" />
+    <ClCompile Include="FileParser.cpp" />
     <ClCompile Include="GenerationTool.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="ObjectsList.cpp" />
@@ -171,6 +172,7 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CheckerboardTexture.h" />
     <ClInclude Include="Faces.h" />
+    <ClInclude Include="FileParser.h" />
     <ClInclude Include="GenerationTool.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="UniColorTexture.h" />

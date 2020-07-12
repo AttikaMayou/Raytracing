@@ -7,24 +7,8 @@
 #include <ctime>
 #include <chrono>
 
-#include "Camera.h"
 #include "Utils.h"
-
-// OBJECTS
-#include "ObjectsList.h"
-#include "Sphere.h"
-#include "Box.h"
-
-// MATERIAL
-#include "Lambertian.h"
-#include "Metal.h"
-#include "Dielectric.h"
-#include "DiffuseLight.h"
-
-// TEXTURE
-#include "UniColorTexture.h"
-#include "CheckerboardTexture.h"
-#include "ImageTexture.h"
+#include "FileParser.h"
 
 using namespace std;
 

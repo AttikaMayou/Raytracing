@@ -1,0 +1,5 @@
+sphere 0 0 0 0.5 lambert unicolor 1 0 0
+sphere 1 0 0 0.5 metal empty 0.4 0.4 0.4 0.5
+sphere -1 0 0 0.5 dielectric empty 1.5
+sphere 0 -1000.5 0 1000 lambert checker 1 0 0 0 1 0
+cam 0 1 -1.5 0 0 0

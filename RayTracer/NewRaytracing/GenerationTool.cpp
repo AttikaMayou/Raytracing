@@ -96,7 +96,7 @@ vec3 GenerationTool::GetColorWithRay(const Ray& ray, ObjectsList world, int dept
 		}
 	}
 	else {
-		return vec3(0, 0, 0);
+		return vec3(0.2, 0.4, 0.8);
 	}
 }
 
@@ -155,11 +155,13 @@ ObjectsList GetScene() {
 
 void GenerationTool::StartImageCreation() {
 	ObjectsList world;
+	FileParser fileParser(inputSceneName);
+
 	if (inputSceneName == "") {
 		world = GetScene();
 	}
 	else {
-		//world = GetObjectsList(inputSceneName);
+		world = fileParser.GetScene();
 	}
 
 	for (int indexImg = 0; indexImg < nbImage; ++indexImg) {
@@ -177,7 +179,18 @@ void GenerationTool::StartImageCreation() {
 
 		float widthPart = width / nbThread;
 
-		Camera cam(vec3(278, 278, -800), vec3(278, 278, 0), vec3(0, 1, 0), 40, float(width / height), 0.0, 10.0, 0.0, 1.0);
+		vec3 camPos;
+		vec3 lookAt;
+		if (fileParser.camIsDefined) {
+			camPos = fileParser.posCam;
+			lookAt = fileParser.lookAt;
+		}
+		else {
+			camPos = vec3(278, 278, -800);
+			lookAt = vec3(278, 278, 0);
+		}
+
+		Camera cam(camPos, lookAt, vec3(0, 1, 0), 90, float(width / height), 0.0, 10.0, 0.0, 1.0);
 
 		for (int i = 0; i < nbThread; i++) {
 			threads[i] = GetPartPixelsData(i, width, height, widthPart * i, widthPart * i + widthPart, indexImg, cam, world);

@@ -41,6 +41,20 @@ Menu& Menu::operator=(const Menu& m)
 }
 
 bool Menu::CheckIfFileExists(string filename) {
+	DIR* rep = opendir(".");
+
+	if (rep != NULL)
+	{
+		struct dirent* ent;
+
+		while ((ent = readdir(rep)) != NULL)
+		{
+			cout << ent->d_name << endl;
+		}
+
+		closedir(rep);
+	}
+
 	ifstream f(filename.c_str());
 	return f.good();
 }
@@ -49,11 +63,10 @@ void Menu::ChooseSceneName() {
 	bool closeMenu = false;
 	
 	do {
-		cout << "Choissisez votre scene " << à << " charg" << é << " (ne tapez rien pour la sc" << è << "ne par d" << é << "faut)" << endl;
+		cout << "Choissisez votre scene " << à << " charg" << é << " (tapez defaut pour la sc" << è << "ne par d" << é << "faut)" << endl;
 		cin >> inputSceneName;
 
-		cout << (inputSceneName == "rien") << endl;
-		if (inputSceneName == "" || inputSceneName == "rien") {
+		if (inputSceneName == "defaut") {
 			inputSceneName = "";
 		} else if (!CheckIfFileExists(inputSceneName)) {
 			cout << "Fichier non trouv" << é << endl;
@@ -145,7 +158,7 @@ bool Menu::ConfirmParameters() {
 }
 
 void Menu::StartMainMenu() {
-	do {
+	/*do {
 		ChooseSceneName();
 		
 		ChooseOutputFilename();
@@ -156,7 +169,7 @@ void Menu::StartMainMenu() {
 
 		ChooseNbImage();
 	} while (!ConfirmParameters());
-
+	*/
 	GenerationTool generationTool(inputSceneName, outputImgName, width, height, nbThread, nbImage);
 	generationTool.StartImageCreation();
 }
