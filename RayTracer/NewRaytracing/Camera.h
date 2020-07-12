@@ -8,7 +8,11 @@
 
 class Camera {
 public:
+	Camera();
 	Camera(vec3 lookFrom, vec3 lookAt, vec3 vup, float vfov, float aspect, float aperture, float focusDist, float t0, float t1);
+	Camera(const Camera& copy);
+	~Camera();
+	Camera& operator=(const Camera& c);
 	Ray getRay(float u, float v) const;
 
 private:

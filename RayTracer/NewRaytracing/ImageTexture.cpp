@@ -1,9 +1,22 @@
 #include "ImageTexture.h"
 
-ImageTexture::ImageTexture() {
+ImageTexture::ImageTexture() : data(nullptr), width(0), height(0) {}
+
+ImageTexture::ImageTexture(unsigned char* pixels, int a, int b) : data(pixels), width(a), height(b) {}
+
+ImageTexture::ImageTexture(const ImageTexture& copy) : data(copy.data), width(copy.width), height(copy.height) {}
+
+ImageTexture::~ImageTexture()
+{
+	delete data;
 }
 
-ImageTexture::ImageTexture(unsigned char* pixels, int a, int b) : data(pixels), width(a), height(b) {
+ImageTexture& ImageTexture::operator=(const ImageTexture& i)
+{
+	data = i.data;
+	width = i.width;
+	height = i.height;
+	return *this;
 }
 
 vec3 ImageTexture::value(float u, float v, const vec3& p) const {

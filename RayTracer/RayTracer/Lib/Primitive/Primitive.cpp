@@ -12,10 +12,16 @@ Primitive::Primitive(Material* m)
 	mat = m;
 }
 
-Primitive::Primitive(const vec3& p, const vec3& r, const vec3& s)
-	: position(p), rotation(r), scale(s)
+Primitive::Primitive(const vec3& p)
+	: position(p), rotation({ 0.f, 0.f, 0.f }), scale({ 1.f, 1.f, 1.f })
 {
 	mat = nullptr;
+}
+
+Primitive::Primitive(const vec3& p, Material* m)
+	: position(p), rotation({ 0.f, 0.f, 0.f }), scale({ 1.f, 1.f, 1.f })
+{
+	mat = m;
 }
 
 Primitive::Primitive(const vec3& p, const vec3& r, const vec3& s, Material* m)
@@ -48,27 +54,74 @@ Primitive::~Primitive()
 
 void Primitive::Translate(const vec3& t)
 {
+	Matrix mTranslation;
+	mTranslation(0, 3) = t.getX();
+	mTranslation(1, 3) = t.getY();
+	mTranslation(2, 3) = t.getZ();
+
+	trans = mTranslation * trans;
+	transInv = trans.inverse();
 }
 
 void Primitive::RotateX(float deg)
 {
+	Matrix mRotation;
+	mRotation(1, 1) = cos(deg);
+	mRotation(2, 1) = sin(deg);
+	mRotation(1, 2) = -sin(deg);
+	mRotation(2, 2) = cos(deg);
+
+	trans = mRotation * trans;
+	transInv = trans.inverse();
 }
 
 void Primitive::RotateY(float deg)
 {
+	Matrix mRotation;
+	mRotation(0, 0) = cos(deg);
+	mRotation(0, 2) = sin(deg);
+	mRotation(2, 0) = -sin(deg);
+	mRotation(2, 2) = cos(deg);
+
+	trans = mRotation * trans;
+	transInv = trans.inverse();
 }
 
 void Primitive::RotateZ(float deg)
 {
+	Matrix mRotation;
+	mRotation(0, 0) = cos(deg);
+	mRotation(1, 0) = sin(deg);
+	mRotation(0, 1) = -sin(deg);
+	mRotation(1, 1) = cos(deg);
+
+	trans = mRotation * trans;
+	transInv = trans.inverse();
 }
 
-void Primitive::Scale(const vec3& s)
+void Primitive::Scale(const float s)
 {
+	Matrix mScale;
+	mScale(0, 0) = s;
+	mScale(1, 1) = s;
+	mScale(2, 2) = s;
+
+	trans = mScale * trans;
+	transInv = trans.inverse();
 }
 
 vec3 Primitive::LocalToGlobal(const vec3& v) const
 {
-	return { 0.f, 0.f, 0.f };
+	vec3 l = { v.getX(), v.getY(), v.getZ() };
+
+	return l;
+}
+
+vec3 Primitive::GlobalToLocal(const vec3& v) const
+{
+	vec3 g;
+
+	return g;
 }
 
 void Primitive::SetPosition(const vec3& p)

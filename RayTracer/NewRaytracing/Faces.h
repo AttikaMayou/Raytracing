@@ -7,6 +7,9 @@ class RectXY : public Intersects {
 public:
 	RectXY();
 	RectXY(float _x0, float _x1, float _y0, float _y1, float _k, Material* mat);
+	RectXY(const RectXY& copy);
+	~RectXY();
+	RectXY& operator=(const RectXY& r);
 	virtual bool hit(const Ray& r, float tMin, float tMax, IntersectRecord& intersectRecord) const;
 
 private:
@@ -22,6 +25,9 @@ class RectXZ : public Intersects {
 public:
 	RectXZ();
 	RectXZ(float _x0, float _x1, float _z0, float _z1, float _k, Material* mat);
+	RectXZ(const RectXZ& copy);
+	~RectXZ();
+	RectXZ& operator=(const RectXZ& r);
 	virtual bool hit(const Ray& r, float tMin, float tMax, IntersectRecord& intersectRecord) const;
 
 private:
@@ -37,6 +43,9 @@ class RectYZ : public Intersects {
 public:
 	RectYZ();
 	RectYZ(float _y0, float _y1, float _z0, float _z1, float _k, Material* mat);
+	RectYZ(const RectYZ& copy);
+	~RectYZ();
+	RectYZ& operator=(const RectYZ& r);
 	virtual bool hit(const Ray& r, float tMin, float tMax, IntersectRecord& intersectRecord) const;
 
 private:
@@ -50,7 +59,11 @@ private:
 
 class FlipFace : public Intersects {
 public:
+	FlipFace();
 	FlipFace(Intersects* obj);
+	FlipFace(const FlipFace& copy);
+	~FlipFace();
+	FlipFace& operator=(const FlipFace& f);
 	virtual bool hit(const Ray& r, float tMin, float tMax, IntersectRecord& intersectRecord) const;
 
 private:

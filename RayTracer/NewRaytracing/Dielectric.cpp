@@ -1,6 +1,18 @@
 #include "Dielectric.h"
 
+Dielectric::Dielectric() : refIdx(0.f) {}
+
 Dielectric::Dielectric(float ri) : refIdx(ri) {}
+
+Dielectric::Dielectric(const Dielectric& copy) : refIdx(copy.refIdx) {}
+
+Dielectric::~Dielectric() {}
+
+Dielectric& Dielectric::operator=(const Dielectric& d)
+{
+	refIdx = d.refIdx;
+	return *this;
+}
 
 bool Dielectric::scatter(const Ray& rayIn, const IntersectRecord& rec, vec3& attenuation, Ray& scattered) const {
 	vec3 outwardNormal;

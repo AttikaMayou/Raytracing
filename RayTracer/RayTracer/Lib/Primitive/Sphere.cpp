@@ -1,19 +1,19 @@
 ﻿#include "../../Header/Primitive/Sphere.h"
 
 Sphere::Sphere()
-	: Primitive({ 0.f, 0.f, 0.f }, { 0.f, 0.f, 0.f }, { 1.f,1.f,1.f }), radius(0.f)
+	: Primitive(), radius(0.f)
 {
 	mat = new Material(Material::Type::MATTE, { 0.f, 1.f, 0.f }, 1.f);
 }
 
 Sphere::Sphere(const vec3& p, const float r)
-	: Primitive(p, {0.f, 0.f, 0.f}, {1.f,1.f,1.f}), radius(r) 
+	: Primitive(p), radius(r) 
 {
 	mat = new Material(Material::Type::MATTE, { 0.f, 1.f, 0.f }, 1.f);
 }
 
 Sphere::Sphere(const vec3& p, float r, Material* m)
-	: Primitive(p, { 0.f, 0.f, 0.f }, { 1.f,1.f,1.f }, m), radius(r)
+	: Primitive(p, m), radius(r)
 {
 
 }

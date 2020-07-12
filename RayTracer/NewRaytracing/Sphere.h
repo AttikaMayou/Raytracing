@@ -7,8 +7,10 @@
 class Sphere : public Intersects {
 	public:
 		Sphere();
-
-		Sphere(vec3 cen, float r, Material* m);
+		Sphere(const vec3& cen, float r, Material* m);
+		~Sphere();
+		Sphere(const Sphere& copy);
+		Sphere& operator=(const Sphere& s);
 
 		virtual bool hit(const Ray& r, float tMin, float tMax, IntersectRecord& intersectRecord) const;
 

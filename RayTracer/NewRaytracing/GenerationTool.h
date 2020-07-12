@@ -30,7 +30,11 @@ using namespace std;
 
 class GenerationTool {
 public:
+	GenerationTool();
 	GenerationTool(string _inputSceneName, string _outputImgName, int _width, int _height, int _nbThread, int _nbImage);
+	GenerationTool(const GenerationTool& copy);
+	~GenerationTool();
+	GenerationTool& operator=(const GenerationTool g);
 
 	void CreateJpg(int width, int height, int channels, int nbImg);
 	vec3 GetColorWithRay(const Ray& ray, ObjectsList world, int depth);

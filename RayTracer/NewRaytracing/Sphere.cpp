@@ -1,8 +1,23 @@
 #include "Sphere.h"
 
-Sphere::Sphere() {}
+Sphere::Sphere() : center({ 0, 0, 0 }), radius(1) {}
 
-Sphere::Sphere(vec3 cen, float r, Material* m) : center(cen), radius(r), mat(m) {}
+Sphere::Sphere(const vec3& cen, float r, Material* m) : center(cen), radius(r), mat(m) {}
+
+Sphere::~Sphere()
+{
+	delete mat;
+}
+
+Sphere::Sphere(const Sphere& copy) : center(copy.center), radius(copy.radius), mat(copy.mat) {}
+
+Sphere& Sphere::operator=(const Sphere& s)
+{
+	center = s.center;
+	radius = s.radius;
+	mat = s.mat;
+	return *this;
+}
 
 bool Sphere::hit(const Ray& r, float tMin, float tMax, IntersectRecord& intersectRecord) const {
 	vec3 rayDirection = r.getDirection();

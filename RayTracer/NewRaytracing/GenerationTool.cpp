@@ -6,6 +6,17 @@
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "external/stb_image_write.h"
 
+GenerationTool::GenerationTool()
+{
+	width = 0;
+	height = 0;
+	nbThread = 0;
+	nbImage = 0;
+
+	inputSceneName = "";
+	outputImgName = "";
+}
+
 GenerationTool::GenerationTool(string _inputSceneName, string _outputImgName, int _width, int _height, int _nbThread, int _nbImage) {
 	width = _width;
 	height = _height;
@@ -14,6 +25,31 @@ GenerationTool::GenerationTool(string _inputSceneName, string _outputImgName, in
 
 	inputSceneName = _inputSceneName;
 	outputImgName = _outputImgName;
+}
+
+GenerationTool::GenerationTool(const GenerationTool& copy)
+{
+	width = copy.width;
+	height = copy.height;
+	nbThread = copy.nbThread;
+	nbImage = copy.nbImage;
+
+	inputSceneName = copy.inputSceneName;
+	outputImgName = copy.outputImgName;
+}
+
+GenerationTool::~GenerationTool() {}
+
+GenerationTool& GenerationTool::operator=(const GenerationTool g)
+{
+	width = g.width;
+	height = g.height;
+	nbThread = g.nbThread;
+	nbImage = g.nbImage;
+
+	inputSceneName = g.inputSceneName;
+	outputImgName = g.outputImgName;
+	return* this;
 }
 
 void GenerationTool::CreateJpg(int width, int height, int channels, int nbImg) {

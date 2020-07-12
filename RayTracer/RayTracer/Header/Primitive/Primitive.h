@@ -2,12 +2,16 @@
 
 #include "../Material.h"
 #include "../Ray.h"
+#include "../Utils/Matrix.h"
 #include <iostream>
 
 class Primitive {
 
 private :
+	
 protected :
+	Matrix trans;
+	Matrix transInv;
 	vec3 position;
 	vec3 rotation;
 	vec3 scale;
@@ -15,7 +19,8 @@ protected :
 public :
 	Primitive();
 	Primitive(Material* m);
-	Primitive(const vec3& p, const vec3& r, const vec3& s);
+	Primitive(const vec3& p);
+	Primitive(const vec3& p, Material* m);
 	Primitive(const vec3& p, const vec3& r, const vec3& s, Material* m);
 	Primitive(const Primitive& p);
 	Primitive& operator=(const Primitive& p);
@@ -25,8 +30,9 @@ public :
 	void RotateX(float deg);
 	void RotateY(float deg);
 	void RotateZ(float deg);
-	void Scale(const vec3& s);
+	void Scale(const float s);
 	vec3 LocalToGlobal(const vec3& v) const;
+	vec3 GlobalToLocal(const vec3& v) const;
 
 	vec3 GetPosition() const { return position; };
 	vec3 GetRotation() const { return rotation; };

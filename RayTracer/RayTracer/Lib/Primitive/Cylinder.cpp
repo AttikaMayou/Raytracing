@@ -1,19 +1,19 @@
 #include "../../Header/Primitive/Cylinder.h"
 
 Cylinder::Cylinder()
-	: axe({ 0.f, 1.f, 0.f }), radius(0.f)
+	: Primitive(), axe({ 0.f, 1.f, 0.f }), radius(0.f)
 {
 	mat = new Material(Material::Type::MATTE, { 0.f, 1.f, 0.f }, 1.f);
 }
 
 Cylinder::Cylinder(const vec3& p, const vec3 a, const float r)
-	: axe(a), radius(r)
+	: Primitive(p), axe(a), radius(r)
 {
 	mat = new Material(Material::Type::MATTE, { 0.f, 1.f, 0.f }, 1.f);
 }
 
 Cylinder::Cylinder(const vec3& p, const vec3 a, const float r, Material* m)
-	: Primitive(m), axe(a), radius(r)
+	: Primitive(p, m), axe(a), radius(r)
 {
 	
 }

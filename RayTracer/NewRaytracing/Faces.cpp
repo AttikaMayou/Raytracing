@@ -1,8 +1,37 @@
 #include "Faces.h"
 
-// X - Y face
-RectXY::RectXY(float _x0, float _x1, float _y0, float _y1, float _k, Material* mat) : x0(_x0), x1(_x1), y0(_y0), y1(_y1), k(_k), material(mat) {
+RectXY::RectXY() : x0(0.f), x1(0.f), y0(0.f), y1(0.f), k(0.f)
+{
+	material = nullptr;
+}
 
+// X - Y face
+RectXY::RectXY(float _x0, float _x1, float _y0, float _y1, float _k, Material* mat) : x0(_x0), x1(_x1), y0(_y0), y1(_y1), k(_k), material(mat) {}
+
+RectXY::RectXY(const RectXY& copy)
+{
+	x0 = copy.x0;
+	x1 = copy.x1;
+	y0 = copy.y0;
+	y1 = copy.y1;
+	k = copy.k;
+	material = copy.material;
+}
+
+RectXY::~RectXY()
+{
+	//delete material;
+}
+
+RectXY& RectXY::operator=(const RectXY& r)
+{
+	x0 = r.x0;
+	x1 = r.x1;
+	y0 = r.y0;
+	y1 = r.y1;
+	k = r.k;
+	material = r.material;
+	return *this;
 }
 
 bool RectXY::hit(const Ray& r, float tMin, float tMax, IntersectRecord& intersectRecord) const
@@ -32,9 +61,38 @@ bool RectXY::hit(const Ray& r, float tMin, float tMax, IntersectRecord& intersec
 	return true;
 }
 
-// X - Z face
-RectXZ::RectXZ(float _x0, float _x1, float _z0, float _z1, float _k, Material* mat) : x0(_x0), x1(_x1), z0(_z0), z1(_z1), k(_k), material(mat) {
+RectXZ::RectXZ() : x0(0.f), x1(0.f), z0(0.f), z1(0.f), k(0.f)
+{
+	material = nullptr;
+}
 
+// X - Z face
+RectXZ::RectXZ(float _x0, float _x1, float _z0, float _z1, float _k, Material* mat) : x0(_x0), x1(_x1), z0(_z0), z1(_z1), k(_k), material(mat) {}
+
+RectXZ::RectXZ(const RectXZ& copy)
+{
+	x0 = copy.x0;
+	x1 = copy.x1;
+	z0 = copy.z0;
+	z1 = copy.z1;
+	k = copy.k;
+	material = copy.material;
+}
+
+RectXZ::~RectXZ()
+{
+	//delete material;
+}
+
+RectXZ& RectXZ::operator=(const RectXZ& r)
+{
+	x0 = r.x0;
+	x1 = r.x1;
+	z0 = r.z0;
+	z1 = r.z1;
+	k = r.k;
+	material = r.material;
+	return *this;
 }
 
 bool RectXZ::hit(const Ray& r, float tMin, float tMax, IntersectRecord& intersectRecord) const
@@ -64,9 +122,38 @@ bool RectXZ::hit(const Ray& r, float tMin, float tMax, IntersectRecord& intersec
 	return true;
 }
 
-// Y - Z face
-RectYZ::RectYZ(float _y0, float _y1, float _z0, float _z1, float _k, Material* mat) : y0(_y0), y1(_y1), z0(_z0), z1(_z1), k(_k), material(mat) {
+RectYZ::RectYZ() : y0(0.f), y1(0.f), z0(0.f), z1(0.f), k(0.f)
+{
+	material = nullptr;
+}
 
+// Y - Z face
+RectYZ::RectYZ(float _y0, float _y1, float _z0, float _z1, float _k, Material* mat) : y0(_y0), y1(_y1), z0(_z0), z1(_z1), k(_k), material(mat) {}
+
+RectYZ::RectYZ(const RectYZ& copy)
+{
+	y0 = copy.y0;
+	y1 = copy.y1;
+	z0 = copy.z0;
+	z1 = copy.z1;
+	k = copy.k;
+	material = copy.material;
+}
+
+RectYZ::~RectYZ()
+{
+	//delete material;
+}
+
+RectYZ& RectYZ::operator=(const RectYZ& r)
+{
+	y0 = r.y0;
+	y1 = r.y1;
+	z0 = r.z0;
+	z1 = r.z1;
+	k = r.k;
+	material = r.material;
+	return *this;
 }
 
 bool RectYZ::hit(const Ray& r, float tMin, float tMax, IntersectRecord& intersectRecord) const
@@ -96,8 +183,24 @@ bool RectYZ::hit(const Ray& r, float tMin, float tMax, IntersectRecord& intersec
 	return true;
 }
 
-FlipFace::FlipFace(Intersects* obj) : ptr(obj) {
+FlipFace::FlipFace() : ptr(nullptr) {}
 
+FlipFace::FlipFace(Intersects* obj) : ptr(obj) {}
+
+FlipFace::FlipFace(const FlipFace& copy)
+{
+	ptr = copy.ptr;
+}
+
+FlipFace::~FlipFace()
+{
+	delete ptr;
+}
+
+FlipFace& FlipFace::operator=(const FlipFace& f)
+{
+	ptr = f.ptr;
+	return *this;
 }
 
 bool FlipFace::hit(const Ray& r, float tMin, float tMax, IntersectRecord& intersectRecord) const {

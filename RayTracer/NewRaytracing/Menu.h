@@ -8,6 +8,9 @@
 class Menu {
 public:
 	Menu();
+	~Menu();
+	Menu(const Menu& copy);
+	Menu& operator=(const Menu& m);
 
 	bool CheckIfFileExists(string filename);
 	

@@ -15,6 +15,31 @@ Menu::Menu() {
 	outputImgName = "";
 }
 
+Menu::~Menu() {}
+
+Menu::Menu(const Menu& copy)
+{
+	width = copy.width;
+	height = copy.height;
+	nbThread = copy.nbThread;
+	nbImage = copy.nbImage;
+
+	inputSceneName = copy.inputSceneName;
+	outputImgName = copy.outputImgName;
+}
+
+Menu& Menu::operator=(const Menu& m)
+{
+	width = m.width;
+	height = m.height;
+	nbThread = m.nbThread;
+	nbImage = m.nbImage;
+
+	inputSceneName = m.inputSceneName;
+	outputImgName = m.outputImgName;
+	return *this;
+}
+
 bool Menu::CheckIfFileExists(string filename) {
 	ifstream f(filename.c_str());
 	return f.good();

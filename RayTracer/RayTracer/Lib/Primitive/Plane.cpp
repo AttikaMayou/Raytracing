@@ -1,19 +1,19 @@
 #include "../../Header/Primitive/Plane.h"
 
 Plane::Plane()
-	: axe({1.f, 1.f, 0.f})
+	: Primitive(), axe({1.f, 1.f, 0.f})
 {
 	mat = new Material(Material::Type::MATTE, { 0.f, 1.f, 0.f }, 1.f);
 }
 
-Plane::Plane(const vec3& a)
-	: axe(a)
+Plane::Plane(const vec3& p, const vec3& a)
+	: Primitive(p), axe(a)
 {
 	mat = new Material(Material::Type::MATTE, { 0.f, 1.f, 0.f }, 1.f);
 }
 
-Plane::Plane(const vec3& a, Material* m)
-	: Primitive(m), axe(a)
+Plane::Plane(const vec3& p, const vec3& a, Material* m)
+	: Primitive(p, m), axe(a)
 {
 }
 
