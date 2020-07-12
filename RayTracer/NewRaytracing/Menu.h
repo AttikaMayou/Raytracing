@@ -1,7 +1,6 @@
 #pragma once
 
 #include <fstream>
-#include <dirent.h>
 
 #include "GenerationTool.h"
 

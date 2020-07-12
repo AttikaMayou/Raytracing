@@ -1,6 +1,95 @@
-﻿  FileParser.cpp
+﻿  Box.cpp
+  FileParser.cpp
 D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\Camera.h(6,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
 D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\Camera.h(7,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
 D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\FileParser.cpp(44,32): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
 D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\FileParser.cpp(84,64): warning C4305: 'argument' : troncation de 'double' à 'float'
+  GenerationTool.cpp
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\Camera.h(6,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\Camera.h(7,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(964,11): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(1033,19): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(1082,11): warning C4312: 'cast de type' : la conversion de 'int' en 'float *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(1104,19): warning C4312: 'cast de type' : la conversion de 'int' en 'float *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(1330,14): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(1368,50): warning C4312: 'cast de type' : la conversion de 'int' en 'float *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(1388,50): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(3297,45): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(3325,71): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(3343,52): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(4457,45): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(4585,61): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(4591,80): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(4599,38): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(4601,25): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(4609,50): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(4644,26): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(4647,23): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(4674,21): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(4677,63): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(4688,37): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(4726,58): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(4904,26): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(4925,20): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(4930,20): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5062,14): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5066,14): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5074,14): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5082,14): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5095,14): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5112,14): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5116,21): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5258,38): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5286,17): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5297,44): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5298,38): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5312,23): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5331,52): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5349,48): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5360,32): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5369,45): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5396,33): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5397,34): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5611,31): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5615,48): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5620,23): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5631,20): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5660,52): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5667,52): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5684,23): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5714,23): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5747,20): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5860,14): warning C4312: 'cast de type' : la conversion de 'int' en 'float *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5869,26): warning C4312: 'cast de type' : la conversion de 'int' en 'float *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5874,42): warning C4312: 'cast de type' : la conversion de 'int' en 'float *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5878,42): warning C4312: 'cast de type' : la conversion de 'int' en 'float *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(5927,79): warning C4312: 'cast de type' : la conversion de 'int' en 'float *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\external\stb_image.h(6142,21): warning C4312: 'cast de type' : la conversion de 'int' en 'unsigned char *' d'une taille supérieure
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\GenerationTool.cpp(60,14): warning C4101: 'b' : variable locale non référencée
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\GenerationTool.cpp(61,10): warning C4101: 'ig' : variable locale non référencée
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\GenerationTool.cpp(61,6): warning C4101: 'ir' : variable locale non référencée
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\GenerationTool.cpp(61,14): warning C4101: 'ib' : variable locale non référencée
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\GenerationTool.cpp(60,11): warning C4101: 'g' : variable locale non référencée
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\GenerationTool.cpp(60,8): warning C4101: 'r' : variable locale non référencée
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\GenerationTool.cpp(99,28): warning C4305: 'argument' : troncation de 'double' à 'float'
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\GenerationTool.cpp(107,14): warning C4244: 'initialisation' : conversion de 'float' en 'int', perte possible de données
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\GenerationTool.cpp(109,15): warning C4244: 'initialisation' : conversion de 'const float' en 'int', perte possible de données
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\GenerationTool.cpp(121,17): warning C4244: 'argument' : conversion de 'int' en 'const float', perte possible de données
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\GenerationTool.cpp(135,71): warning C4305: 'argument' : troncation de 'double' à 'float'
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\GenerationTool.cpp(136,73): warning C4305: 'argument' : troncation de 'double' à 'float'
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\GenerationTool.cpp(137,73): warning C4305: 'argument' : troncation de 'double' à 'float'
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\GenerationTool.cpp(180,19): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\GenerationTool.cpp(196,45): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\GenerationTool.cpp(196,38): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  Menu.cpp
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\Camera.h(6,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\Camera.h(7,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+  NewRaytracing.cpp
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\Camera.h(6,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\Camera.h(7,10): warning C4067: jetons inattendus après la directive du préprocesseur - saut de ligne attendu
+  ObjectsList.cpp
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\ObjectsList.cpp(7,21): warning C4267: '=' : conversion de 'size_t' en 'int', perte possible de données
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\ObjectsList.cpp(41,29): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\NewRaytracing\ObjectsList.cpp(54,24): warning C4267: '=' : conversion de 'size_t' en 'int', perte possible de données
+  Génération de code en cours...
   NewRaytracing.vcxproj -> D:\OneDrive\Documents\ESGI 4eme année\RaytracingXCpp\Raytracing\RayTracer\x64\Debug\NewRaytracing.exe

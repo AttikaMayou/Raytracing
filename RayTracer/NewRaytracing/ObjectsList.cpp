@@ -6,7 +6,7 @@ ObjectsList::ObjectsList(vector<Intersects*> l) {
 	list = l;
 	listSize = l.size();
 }
-
+/*
 ObjectsList::ObjectsList(const ObjectsList& copy): listSize(copy.listSize)
 {
 	list = copy.list;
@@ -23,9 +23,14 @@ ObjectsList::~ObjectsList()
 ObjectsList& ObjectsList::operator=(const ObjectsList& o)
 {
 	listSize = o.listSize;
-	list = o.list;
+	
+	list.resize(listSize);
+
+	for (int i = 0; i < listSize; i++) {
+		list[i] = o.list;
+	}
 	return *this;
-}
+}*/
 
 bool ObjectsList::hit(const Ray& r, float tMin, float tMax, IntersectRecord& intersectRecord) const {
 	IntersectRecord tempRecord;

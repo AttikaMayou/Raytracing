@@ -41,20 +41,6 @@ Menu& Menu::operator=(const Menu& m)
 }
 
 bool Menu::CheckIfFileExists(string filename) {
-	DIR* rep = opendir(".");
-
-	if (rep != NULL)
-	{
-		struct dirent* ent;
-
-		while ((ent = readdir(rep)) != NULL)
-		{
-			cout << ent->d_name << endl;
-		}
-
-		closedir(rep);
-	}
-
 	ifstream f(filename.c_str());
 	return f.good();
 }
@@ -158,7 +144,7 @@ bool Menu::ConfirmParameters() {
 }
 
 void Menu::StartMainMenu() {
-	/*do {
+	do {
 		ChooseSceneName();
 		
 		ChooseOutputFilename();
@@ -169,7 +155,7 @@ void Menu::StartMainMenu() {
 
 		ChooseNbImage();
 	} while (!ConfirmParameters());
-	*/
+
 	GenerationTool generationTool(inputSceneName, outputImgName, width, height, nbThread, nbImage);
 	generationTool.StartImageCreation();
 }
